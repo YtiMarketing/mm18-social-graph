@@ -51,8 +51,17 @@ export function generateLinks(profiles) {
         reason = biReasons.length > 0
           ? biReasons.join(' · ')
           : `Общие темы: ${commonTags.slice(0, 3).join(', ')}`;
+      } else if (jac >= 0.2 || (a.city && b.city && a.city.trim().toLowerCase() === b.city.trim().toLowerCase())) {
+        type = 'medium';
+        if (jac >= 0.2) {
+          reason = `Общие темы: ${commonTags.slice(0, 3).join(', ')}`;
+        } else {
+          reason = `Один город: ${a.city}`;
+        }
+      } else if (commonTags.length >= 1) {
+        type = 'weak';
+        reason = `Общий тег: ${commonTags[0]}`;
       }
-      // medium/weak/skip — implemented in next task
 
       if (type) {
         links.push({ source: a.id, target: b.id, type, reason });
