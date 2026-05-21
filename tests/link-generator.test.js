@@ -47,3 +47,25 @@ test('generateLinks: strong link when jaccard >= 0.4', () => {
   assert.equal(links[0].target, 'b');
   assert.match(links[0].reason, /AI|B2B/);
 });
+
+test('generateLinks: strong via bidirectional request/offer even with no tag overlap', () => {
+  const profiles = [
+    { id: 'a', tags: ['e-com'], request: ['ментор'], offer: ['клиент'], city: 'Москва' },
+    { id: 'b', tags: ['IT'], request: [], offer: ['ментор'], city: 'СПб' },
+  ];
+  const links = generateLinks(profiles);
+  assert.equal(links.length, 1);
+  assert.equal(links[0].type, 'strong');
+  assert.match(links[0].reason, /ментор/i);
+});
+
+test('generateLinks: bidirectional match builds reason naming both sides', () => {
+  const profiles = [
+    { id: 'a', name: 'Иван', tags: [], request: ['клиент'], offer: [], city: 'Москва' },
+    { id: 'b', name: 'Пётр', tags: [], request: [], offer: ['клиент'], city: 'СПб' },
+  ];
+  const links = generateLinks(profiles);
+  assert.equal(links.length, 1);
+  // Reason должна упомянуть направление
+  assert.match(links[0].reason, /Иван.*клиент|клиент.*Иван|Пётр/i);
+});
