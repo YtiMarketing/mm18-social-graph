@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Социальные связи MM18</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Splash -->
+  <div id="splash" class="splash">
+    <div class="splash-card">
+      <div class="splash-tag">MM18</div>
+      <h1>Социальные <span class="accent">связи</span> чата<br>MM18</h1>
+      <p>Введи имя или @username, чтобы сразу открыть свои связи.</p>
+      <input id="splash-input" type="text" placeholder="Имя или @username">
+      <button id="splash-enter">Войти</button>
+      <button id="splash-skip" class="link">Пропустить</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="hidden">
+    <div class="header-left">
+      <span class="accent">Социальные связи</span>
+      <span class="muted">чата MM18</span>
+    </div>
+    <div class="header-center">
+      <input id="search" type="text" placeholder="Имя или @telegram…">
+    </div>
+    <div class="header-right">
+      <button class="filter-btn active" data-filter="all">Все связи</button>
+      <button class="filter-btn" data-filter="mine">Мои связи</button>
+      <button class="filter-btn" data-filter="categories">Категории</button>
+      <span class="counter" id="counter-participants">— участников</span>
+      <span class="counter" id="counter-links">— связей</span>
+    </div>
+  </header>
+
+  <!-- Graph canvas -->
+  <main id="graph" class="hidden"></main>
+
+  <!-- Legend -->
+  <aside id="legend" class="hidden">
+    <span class="legend-dot" style="background:#a155b9"></span> Организатор
+    <span class="legend-dot" style="background:#00c853"></span> Ментор
+    <span class="legend-dot" style="background:#4a90d9"></span> Участник
+    <span class="legend-dot" style="background:#ff6b00"></span> Ты
+  </aside>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar hidden">
+    <div class="sidebar-header">
+      <span>ПРОФИЛЬ</span>
+      <button id="sidebar-close">×</button>
+    </div>
+    <div id="sidebar-body"></div>
+  </aside>
+
+  <script src="//cdn.jsdelivr.net/npm/force-graph"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
