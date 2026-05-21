@@ -1,0 +1,449 @@
+{
+  "generated_at": "2026-05-21T17:02:26.315Z",
+  "nodes": [
+    {
+      "id": "ivanov_biz",
+      "name": "Иван Иванов",
+      "telegram": "ivanov_biz",
+      "role": "participant",
+      "city": "Москва",
+      "role_text": "фаундер B2B SaaS",
+      "tags": [
+        "AI",
+        "B2B",
+        "SaaS",
+        "продажи"
+      ],
+      "request": [
+        "клиент",
+        "инвестор"
+      ],
+      "offer": [
+        "обмен опытом"
+      ],
+      "bio": "Делаю SaaS для логистики, выручка 30М/год.",
+      "avatar_initials": "ИИ"
+    },
+    {
+      "id": "petrov_ai",
+      "name": "Пётр Петров",
+      "telegram": "petrov_ai",
+      "role": "participant",
+      "city": "Москва",
+      "role_text": "AI-консультант",
+      "tags": [
+        "AI",
+        "консалтинг",
+        "образование"
+      ],
+      "request": [
+        "обмен опытом"
+      ],
+      "offer": [
+        "ментор",
+        "советник"
+      ],
+      "bio": "Учу команды работать с LLM.",
+      "avatar_initials": "ПП"
+    },
+    {
+      "id": "sidorova_ecom",
+      "name": "Анна Сидорова",
+      "telegram": "sidorova_ecom",
+      "role": "participant",
+      "city": "СПб",
+      "role_text": "основатель e-com бренда",
+      "tags": [
+        "e-com",
+        "B2C",
+        "ритейл",
+        "медийка"
+      ],
+      "request": [
+        "ментор",
+        "партнёр"
+      ],
+      "offer": [
+        "клиент"
+      ],
+      "bio": "Бренд одежды, 100М/год.",
+      "avatar_initials": "АС"
+    },
+    {
+      "id": "kuznetsov_dev",
+      "name": "Дмитрий Кузнецов",
+      "telegram": "kuznetsov_dev",
+      "role": "participant",
+      "city": "Москва",
+      "role_text": "CTO стартапа",
+      "tags": [
+        "IT",
+        "разработка",
+        "B2B",
+        "SaaS"
+      ],
+      "request": [
+        "сотрудник"
+      ],
+      "offer": [
+        "обмен опытом"
+      ],
+      "bio": "CTO в HRtech.",
+      "avatar_initials": "ДК"
+    },
+    {
+      "id": "fedorova_hr",
+      "name": "Елена Фёдорова",
+      "telegram": "fedorova_hr",
+      "role": "participant",
+      "city": "СПб",
+      "role_text": "HRD",
+      "tags": [
+        "HR",
+        "найм",
+        "B2B"
+      ],
+      "request": [
+        "обмен опытом"
+      ],
+      "offer": [
+        "сотрудник"
+      ],
+      "bio": "HR-консалтинг.",
+      "avatar_initials": "ЕФ"
+    },
+    {
+      "id": "volkov_invest",
+      "name": "Алексей Волков",
+      "telegram": "volkov_invest",
+      "role": "participant",
+      "city": "Москва",
+      "role_text": "инвестор",
+      "tags": [
+        "инвест",
+        "fintech",
+        "B2B"
+      ],
+      "request": [
+        "обмен опытом"
+      ],
+      "offer": [
+        "инвестор"
+      ],
+      "bio": "Pre-seed/seed, ticket 10-50М.",
+      "avatar_initials": "АВ"
+    },
+    {
+      "id": "pavlova_med",
+      "name": "Ольга Павлова",
+      "telegram": "pavlova_med",
+      "role": "participant",
+      "city": "Казань",
+      "role_text": "медийщик",
+      "tags": [
+        "маркетинг",
+        "PR",
+        "B2C",
+        "продажи"
+      ],
+      "request": [
+        "клиент"
+      ],
+      "offer": [
+        "обмен опытом"
+      ],
+      "bio": "Personal brand.",
+      "avatar_initials": "ОП"
+    },
+    {
+      "id": "morozov_prod",
+      "name": "Сергей Морозов",
+      "telegram": "morozov_prod",
+      "role": "participant",
+      "city": "Москва",
+      "role_text": "фаундер производства",
+      "tags": [
+        "производство",
+        "B2B",
+        "найм"
+      ],
+      "request": [
+        "ментор",
+        "сотрудник"
+      ],
+      "offer": [
+        "обмен опытом"
+      ],
+      "bio": "Цех металлоконструкций.",
+      "avatar_initials": "СМ"
+    },
+    {
+      "id": "shamalov",
+      "name": "Артур Шамалов",
+      "telegram": "shamalov",
+      "role": "organizer",
+      "city": "Москва",
+      "role_text": "организатор MM",
+      "tags": [
+        "предпринимательство",
+        "образование"
+      ],
+      "request": [],
+      "offer": [
+        "ментор",
+        "обмен опытом"
+      ],
+      "bio": "Орг потока MM18.",
+      "avatar_initials": "АШ"
+    },
+    {
+      "id": "dolgov",
+      "name": "Иван Долгов",
+      "telegram": "dolgov",
+      "role": "mentor",
+      "city": "Москва",
+      "role_text": "ментор",
+      "tags": [
+        "продажи",
+        "B2B",
+        "предпринимательство"
+      ],
+      "request": [],
+      "offer": [
+        "ментор"
+      ],
+      "bio": "Эксперт по B2B-продажам.",
+      "avatar_initials": "ИД"
+    }
+  ],
+  "links": [
+    {
+      "source": "ivanov_biz",
+      "target": "petrov_ai",
+      "type": "strong",
+      "reason": "Пётр Петров ищет: обмен опытом — у Иван Иванов это есть"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "sidorova_ecom",
+      "type": "strong",
+      "reason": "Иван Иванов ищет: клиент — у Анна Сидорова это есть"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "kuznetsov_dev",
+      "type": "medium",
+      "reason": "Общие темы: B2B, SaaS"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "fedorova_hr",
+      "type": "strong",
+      "reason": "Елена Фёдорова ищет: обмен опытом — у Иван Иванов это есть"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "volkov_invest",
+      "type": "strong",
+      "reason": "Иван Иванов ищет: инвестор — у Алексей Волков это есть · Алексей Волков ищет: обмен опытом — у Иван Иванов это есть"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "pavlova_med",
+      "type": "weak",
+      "reason": "Общий тег: продажи"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "morozov_prod",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "shamalov",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "ivanov_biz",
+      "target": "dolgov",
+      "type": "strong",
+      "reason": "Общие темы: B2B, продажи"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "sidorova_ecom",
+      "type": "strong",
+      "reason": "Анна Сидорова ищет: ментор — у Пётр Петров это есть"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "kuznetsov_dev",
+      "type": "strong",
+      "reason": "Пётр Петров ищет: обмен опытом — у Дмитрий Кузнецов это есть"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "volkov_invest",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "pavlova_med",
+      "type": "strong",
+      "reason": "Пётр Петров ищет: обмен опытом — у Ольга Павлова это есть"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "morozov_prod",
+      "type": "strong",
+      "reason": "Пётр Петров ищет: обмен опытом — у Сергей Морозов это есть · Сергей Морозов ищет: ментор — у Пётр Петров это есть"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "shamalov",
+      "type": "strong",
+      "reason": "Пётр Петров ищет: обмен опытом — у Артур Шамалов это есть"
+    },
+    {
+      "source": "petrov_ai",
+      "target": "dolgov",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "sidorova_ecom",
+      "target": "fedorova_hr",
+      "type": "medium",
+      "reason": "Один город: СПб"
+    },
+    {
+      "source": "sidorova_ecom",
+      "target": "pavlova_med",
+      "type": "strong",
+      "reason": "Ольга Павлова ищет: клиент — у Анна Сидорова это есть"
+    },
+    {
+      "source": "sidorova_ecom",
+      "target": "shamalov",
+      "type": "strong",
+      "reason": "Анна Сидорова ищет: ментор — у Артур Шамалов это есть"
+    },
+    {
+      "source": "sidorova_ecom",
+      "target": "dolgov",
+      "type": "strong",
+      "reason": "Анна Сидорова ищет: ментор — у Иван Долгов это есть"
+    },
+    {
+      "source": "kuznetsov_dev",
+      "target": "fedorova_hr",
+      "type": "strong",
+      "reason": "Дмитрий Кузнецов ищет: сотрудник — у Елена Фёдорова это есть · Елена Фёдорова ищет: обмен опытом — у Дмитрий Кузнецов это есть"
+    },
+    {
+      "source": "kuznetsov_dev",
+      "target": "volkov_invest",
+      "type": "strong",
+      "reason": "Алексей Волков ищет: обмен опытом — у Дмитрий Кузнецов это есть"
+    },
+    {
+      "source": "kuznetsov_dev",
+      "target": "morozov_prod",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "kuznetsov_dev",
+      "target": "shamalov",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "kuznetsov_dev",
+      "target": "dolgov",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "fedorova_hr",
+      "target": "volkov_invest",
+      "type": "medium",
+      "reason": "Общие темы: B2B"
+    },
+    {
+      "source": "fedorova_hr",
+      "target": "pavlova_med",
+      "type": "strong",
+      "reason": "Елена Фёдорова ищет: обмен опытом — у Ольга Павлова это есть"
+    },
+    {
+      "source": "fedorova_hr",
+      "target": "morozov_prod",
+      "type": "strong",
+      "reason": "Елена Фёдорова ищет: обмен опытом — у Сергей Морозов это есть · Сергей Морозов ищет: сотрудник — у Елена Фёдорова это есть"
+    },
+    {
+      "source": "fedorova_hr",
+      "target": "shamalov",
+      "type": "strong",
+      "reason": "Елена Фёдорова ищет: обмен опытом — у Артур Шамалов это есть"
+    },
+    {
+      "source": "fedorova_hr",
+      "target": "dolgov",
+      "type": "medium",
+      "reason": "Общие темы: B2B"
+    },
+    {
+      "source": "volkov_invest",
+      "target": "pavlova_med",
+      "type": "strong",
+      "reason": "Алексей Волков ищет: обмен опытом — у Ольга Павлова это есть"
+    },
+    {
+      "source": "volkov_invest",
+      "target": "morozov_prod",
+      "type": "strong",
+      "reason": "Алексей Волков ищет: обмен опытом — у Сергей Морозов это есть"
+    },
+    {
+      "source": "volkov_invest",
+      "target": "shamalov",
+      "type": "strong",
+      "reason": "Алексей Волков ищет: обмен опытом — у Артур Шамалов это есть"
+    },
+    {
+      "source": "volkov_invest",
+      "target": "dolgov",
+      "type": "medium",
+      "reason": "Общие темы: B2B"
+    },
+    {
+      "source": "pavlova_med",
+      "target": "dolgov",
+      "type": "weak",
+      "reason": "Общий тег: продажи"
+    },
+    {
+      "source": "morozov_prod",
+      "target": "shamalov",
+      "type": "strong",
+      "reason": "Сергей Морозов ищет: ментор — у Артур Шамалов это есть"
+    },
+    {
+      "source": "morozov_prod",
+      "target": "dolgov",
+      "type": "strong",
+      "reason": "Сергей Морозов ищет: ментор — у Иван Долгов это есть"
+    },
+    {
+      "source": "shamalov",
+      "target": "dolgov",
+      "type": "medium",
+      "reason": "Общие темы: предпринимательство"
+    }
+  ]
+}
