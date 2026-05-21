@@ -1,0 +1,14 @@
+{
+  "name": "mm18-social-graph",
+  "version": "0.1.0",
+  "description": "Интерактивный граф соц-связей участников MM18",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "serve": "python3 -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
