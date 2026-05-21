@@ -1,4 +1,4 @@
-function normalize(arr) {
+export function normalize(arr) {
   return new Set((arr || []).map(s => String(s).trim().toLowerCase()).filter(Boolean));
 }
 
@@ -13,6 +13,25 @@ export function jaccard(a, b) {
 }
 
 export function generateLinks(profiles) {
-  // stub, implemented in next task
-  return [];
+  const links = [];
+  for (let i = 0; i < profiles.length; i++) {
+    for (let j = i + 1; j < profiles.length; j++) {
+      const a = profiles[i];
+      const b = profiles[j];
+
+      const jac = jaccard(a.tags, b.tags);
+      const setB = normalize(b.tags);
+      const commonTags = (a.tags || []).filter(t => setB.has(String(t).trim().toLowerCase()));
+
+      if (jac >= 0.4) {
+        links.push({
+          source: a.id,
+          target: b.id,
+          type: 'strong',
+          reason: `Общие темы: ${commonTags.slice(0, 3).join(', ')}`,
+        });
+      }
+    }
+  }
+  return links;
 }
