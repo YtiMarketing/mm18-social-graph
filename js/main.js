@@ -1,6 +1,7 @@
 import { initSplash, resolveSelf } from './splash.js';
 import { createGraph } from './graph.js';
 import { openSidebar, closeSidebar } from './sidebar.js';
+import { initSearch } from './search.js';
 
 async function main() {
   const dataRes = await fetch('./data/participants.json');
@@ -18,6 +19,8 @@ async function main() {
   const graph = createGraph(container, data, selfId, node => {
     openSidebar(node, data, selfId);
   });
+
+  initSearch(graph, data);
 
   document.getElementById('sidebar-close').addEventListener('click', closeSidebar);
 
