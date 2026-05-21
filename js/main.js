@@ -2,6 +2,7 @@ import { initSplash, resolveSelf } from './splash.js';
 import { createGraph } from './graph.js';
 import { openSidebar, closeSidebar } from './sidebar.js';
 import { initSearch } from './search.js';
+import { initFilters } from './filters.js';
 
 async function main() {
   const dataRes = await fetch('./data/participants.json');
@@ -21,6 +22,7 @@ async function main() {
   });
 
   initSearch(graph, data);
+  initFilters(graph, data, selfId);
 
   document.getElementById('sidebar-close').addEventListener('click', closeSidebar);
 
