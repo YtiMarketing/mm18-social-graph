@@ -70,3 +70,45 @@ export function generateLinks(profiles) {
   }
   return links;
 }
+
+function initials(firstName, lastName) {
+  const f = (firstName || '').trim()[0] || '';
+  const l = (lastName || '').trim()[0] || '';
+  return (f + l).toUpperCase() || '??';
+}
+
+export function buildGraphData(profiles) {
+  const visible = (profiles || []).filter(p => p.role !== 'care' && p.role !== 'tech');
+
+  const nodes = visible.map(p => ({
+    id: p.tg_username,
+    name: `${p.first_name || ''} ${p.last_name || ''}`.trim(),
+    telegram: p.tg_username,
+    role: p.role || 'participant',
+    city: p.city || '',
+    role_text: p.role_text || '',
+    tags: p.tags || [],
+    request: p.request || [],
+    offer: p.offer || [],
+    bio: p.bio || '',
+    avatar_initials: initials(p.first_name, p.last_name),
+  }));
+
+  // generateLinks expects {id, tags, request, offer, city, name} — convert
+  const forAlgo = nodes.map(n => ({
+    id: n.id,
+    name: n.name,
+    tags: n.tags,
+    request: n.request,
+    offer: n.offer,
+    city: n.city,
+  }));
+
+  const links = generateLinks(forAlgo);
+
+  return {
+    generated_at: new Date().toISOString(),
+    nodes,
+    links,
+  };
+}

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { jaccard, generateLinks } from '../scripts/link-generator.js';
+import { jaccard, generateLinks, buildGraphData } from '../scripts/link-generator.js';
 
 test('jaccard: identical sets returns 1', () => {
   assert.equal(jaccard(['a', 'b'], ['a', 'b']), 1);
@@ -117,4 +117,38 @@ test('generateLinks: handles many participants without dupes', () => {
     assert.ok(!seen.has(key), `duplicate link: ${key}`);
     seen.add(key);
   }
+});
+
+test('buildGraphData returns nodes + links + generated_at', () => {
+  const profiles = [
+    {
+      user_id: '111', tg_username: 'ivan', first_name: 'Иван', last_name: 'Иванов',
+      role: 'participant', city: 'Москва', role_text: 'фаундер',
+      tags: ['AI'], request: [], offer: [], bio: 'bio',
+    },
+    {
+      user_id: '222', tg_username: 'petr', first_name: 'Пётр', last_name: 'Петров',
+      role: 'participant', city: 'Москва', role_text: 'CEO',
+      tags: ['AI', 'B2B'], request: [], offer: [], bio: 'bio2',
+    },
+  ];
+  const data = buildGraphData(profiles);
+  assert.ok(data.generated_at);
+  assert.equal(data.nodes.length, 2);
+  assert.equal(data.nodes[0].id, 'ivan');
+  assert.equal(data.nodes[0].name, 'Иван Иванов');
+  assert.equal(data.nodes[0].avatar_initials, 'ИИ');
+  assert.ok(data.links.length >= 1);
+});
+
+test('buildGraphData filters out care/tech roles', () => {
+  const profiles = [
+    { user_id: '1', tg_username: 'a', first_name: 'A', last_name: 'A', role: 'participant', tags: ['AI'], request: [], offer: [], city: 'M', role_text: '', bio: '' },
+    { user_id: '2', tg_username: 'b', first_name: 'B', last_name: 'B', role: 'care',         tags: ['AI'], request: [], offer: [], city: 'M', role_text: '', bio: '' },
+    { user_id: '3', tg_username: 'c', first_name: 'C', last_name: 'C', role: 'tech',         tags: ['AI'], request: [], offer: [], city: 'M', role_text: '', bio: '' },
+    { user_id: '4', tg_username: 'd', first_name: 'D', last_name: 'D', role: 'mentor',      tags: ['AI'], request: [], offer: [], city: 'M', role_text: '', bio: '' },
+  ];
+  const data = buildGraphData(profiles);
+  const ids = data.nodes.map(n => n.id).sort();
+  assert.deepEqual(ids, ['a', 'd']);
 });
