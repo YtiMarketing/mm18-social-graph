@@ -4,9 +4,11 @@ import { openSidebar, closeSidebar } from './sidebar.js';
 import { initSearch } from './search.js';
 import { initFilters } from './filters.js';
 import { initStars } from './stars.js';
+import { openCategoriesPanel } from './categories.js';
+import { openRatingPanel } from './rating.js';
 
 async function main() {
-  initStars(); // космический фон стартует сразу — мерцает уже на splash
+  initStars();
 
   const dataRes = await fetch('./data/participants.json');
   const data = await dataRes.json();
@@ -15,7 +17,6 @@ async function main() {
   const selfNode = resolveSelf(data.nodes, query);
   const selfId = selfNode?.id || null;
 
-  // counters
   document.getElementById('counter-participants').textContent = `${data.nodes.length} участников`;
   document.getElementById('counter-links').textContent = `${data.links.length} связей`;
 
@@ -25,11 +26,22 @@ async function main() {
   });
 
   initSearch(graph, data, selfId);
-  initFilters(graph, data, selfId);
+  const filters = initFilters(graph, data, selfId);
 
-  document.getElementById('sidebar-close').addEventListener('click', closeSidebar);
+  // Кнопки правых панелей переключают режим sidebar'а
+  document.getElementById('categories-btn').addEventListener('click', () => {
+    openCategoriesPanel(data, graph, (person) => openSidebar(person, data, selfId));
+  });
+  document.getElementById('rating-btn').addEventListener('click', () => {
+    openRatingPanel(data, graph, (person) => openSidebar(person, data, selfId));
+  });
 
-  // Если есть self — центрируемся на нём через 1 сек
+  document.getElementById('sidebar-close').addEventListener('click', () => {
+    closeSidebar();
+    graph.clearHighlight();
+    filters.resetToAll();
+  });
+
   if (selfNode) {
     setTimeout(() => {
       const live = data.nodes.find(n => n.id === selfId);
