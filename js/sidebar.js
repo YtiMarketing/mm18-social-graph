@@ -6,7 +6,8 @@ const ROLE_LABELS = {
   organizer: 'Организатор',
 };
 
-function nodeColorClass(role) {
+function nodeColorClass(role, isSelf) {
+  if (isSelf) return 'background:#ffae42';
   if (role === 'organizer') return 'background:#a155b9';
   if (role === 'mentor') return 'background:#00c853';
   return 'background:#4a90d9';
@@ -47,7 +48,7 @@ export function openSidebar(node, data, selfId) {
 
   body.innerHTML = `
     <div>
-      <span class="profile-avatar" style="${nodeColorClass(node.role)}">${escapeHtml(node.avatar_initials)}</span>
+      <span class="profile-avatar" style="${nodeColorClass(node.role, isSelf)}">${escapeHtml(node.avatar_initials)}</span>
       <span class="profile-name">${escapeHtml(node.name)}</span>
       <div class="profile-tg">
         ${node.telegram ? `<a href="${tgUrl}" target="_blank">@${escapeHtml(node.telegram)}</a>` : '<em>нет username</em>'}
