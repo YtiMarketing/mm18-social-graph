@@ -132,10 +132,16 @@ export function createGraph(container, data, selfId, onNodeClick) {
 
   // Разрядка как в Obsidian Graph View: ноды далеко друг от друга,
   // strong-связи мягко притягивают, weak почти не влияют.
-  graph.d3Force('charge').strength(-900).distanceMax(1200);
+  graph.d3Force('charge').strength(-450).distanceMax(700);
   graph.d3Force('link')
-    .distance(l => l.type === 'strong' ? 120 : (l.type === 'medium' ? 220 : 400))
-    .strength(l => l.type === 'strong' ? 0.35 : (l.type === 'medium' ? 0.1 : 0.005));
+    .distance(l => l.type === 'strong' ? 90 : (l.type === 'medium' ? 170 : 320))
+    .strength(l => l.type === 'strong' ? 0.4 : (l.type === 'medium' ? 0.15 : 0.01));
+
+  // После того как симуляция остановится — вмещаем всю сцену в экран
+  // (force-graph 2D сам не делает auto-fit при больших расстояниях).
+  graph.cooldownTicks(150).onEngineStop(() => {
+    graph.zoomToFit(800, 60);
+  });
 
   return {
     instance: graph,
