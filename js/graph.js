@@ -38,14 +38,30 @@ export function createGraph(container, data, selfId, onNodeClick) {
   let highlightNodes = new Set();
   let highlightLinks = new Set();
 
+  // Pre-init позиций по золотой спирали — d3-force иначе ставит много нод
+  // в (0,0), и с сильным charge симуляция получает деление на ноль → NaN
+  // → cascade через линки → весь граф улетает в Infinity.
+  const N = data.nodes.length;
+  const golden = Math.PI * (3 - Math.sqrt(5));
+  for (let i = 0; i < N; i++) {
+    const n = data.nodes[i];
+    if (!Number.isFinite(n.x) || !Number.isFinite(n.y)) {
+      const r = 30 * Math.sqrt(i + 1);
+      n.x = r * Math.cos(i * golden);
+      n.y = r * Math.sin(i * golden);
+      n.vx = 0;
+      n.vy = 0;
+    }
+  }
+
   const graph = ForceGraph()(container)
     .backgroundColor('rgba(0,0,0,0)')
-    .graphData(data)
     .nodeId('id')
     .nodeVal('val')
     .nodeRelSize(4)
     .nodeLabel(n => `${n.name} (${n.role_text || n.role})`)
     .nodeCanvasObject((node, ctx, scale) => {
+      if (!Number.isFinite(node.x) || !Number.isFinite(node.y)) return;
       const r = Math.sqrt(node.val) * 4;
       const roleKey = node.isSelf ? 'self' : (ROLE_COLORS[node.role] ? node.role : 'participant');
       const color = ROLE_COLORS[roleKey];
@@ -94,6 +110,9 @@ export function createGraph(container, data, selfId, onNodeClick) {
       ctx.globalAlpha = 1;
     })
     .linkCanvasObject((link, ctx) => {
+      const s = link.source, t = link.target;
+      if (!Number.isFinite(s?.x) || !Number.isFinite(s?.y) ||
+          !Number.isFinite(t?.x) || !Number.isFinite(t?.y)) return;
       const style = LINK_STYLE[link.type] || LINK_STYLE.weak;
       const dimmed = highlightLinks.size > 0 && !highlightLinks.has(link);
       ctx.globalAlpha = dimmed ? 0.05 : 1;
@@ -130,19 +149,19 @@ export function createGraph(container, data, selfId, onNodeClick) {
       }
     });
 
-  // Разрядка как в Obsidian Graph View: ноды далеко друг от друга,
-  // strong-связи мягко притягивают, weak почти не влияют.
-  graph.d3Force('charge').strength(-450).distanceMax(700);
+  // Силы должны быть сконфигурированы ДО graphData(), иначе симуляция
+  // успевает прогнать несколько тиков с дефолтными настройками. С -450 charge
+  // и 2756 линками это давало NaN-координаты → createRadialGradient падал.
+  graph.warmupTicks(80);
+  graph.d3VelocityDecay(0.5);
+  graph.graphData(data);
+
+  graph.d3Force('charge').strength(-180).distanceMax(600);
   graph.d3Force('link')
     .distance(l => l.type === 'strong' ? 90 : (l.type === 'medium' ? 170 : 320))
-    .strength(l => l.type === 'strong' ? 0.4 : (l.type === 'medium' ? 0.15 : 0.01));
+    .strength(l => l.type === 'strong' ? 0.35 : (l.type === 'medium' ? 0.12 : 0.01));
 
-  // Прогреваем симуляцию 80 тиков ДО первого рендера — ноды успевают
-  // разойтись по экрану, и первый кадр уже выглядит как граф, а не точка.
-  // Затем fit-камера один раз. cooldownTicks НЕ ограничиваем — пусть
-  // симуляция продолжает до самозатухания.
-  graph.warmupTicks(80);
-  setTimeout(() => graph.zoomToFit(600, 80), 200);
+  setTimeout(() => graph.zoomToFit(800, 100), 600);
 
   return {
     instance: graph,
