@@ -137,11 +137,12 @@ export function createGraph(container, data, selfId, onNodeClick) {
     .distance(l => l.type === 'strong' ? 90 : (l.type === 'medium' ? 170 : 320))
     .strength(l => l.type === 'strong' ? 0.4 : (l.type === 'medium' ? 0.15 : 0.01));
 
-  // После того как симуляция остановится — вмещаем всю сцену в экран
-  // (force-graph 2D сам не делает auto-fit при больших расстояниях).
-  graph.cooldownTicks(150).onEngineStop(() => {
-    graph.zoomToFit(800, 60);
-  });
+  // Прогреваем симуляцию 80 тиков ДО первого рендера — ноды успевают
+  // разойтись по экрану, и первый кадр уже выглядит как граф, а не точка.
+  // Затем fit-камера один раз. cooldownTicks НЕ ограничиваем — пусть
+  // симуляция продолжает до самозатухания.
+  graph.warmupTicks(80);
+  setTimeout(() => graph.zoomToFit(600, 80), 200);
 
   return {
     instance: graph,

@@ -139,6 +139,46 @@ header {
   font-weight: 600;
   box-shadow: 0 0 14px rgba(255, 107, 0, 0.45);
 }
+
+/* Dropdown категорий */
+.dropdown { position: relative; }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 240px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: rgba(20, 18, 35, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px;
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+.dropdown-menu .cat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+  transition: background 0.15s;
+}
+.dropdown-menu .cat-item:hover { background: rgba(255, 107, 0, 0.15); }
+.dropdown-menu .cat-item.active { background: rgba(255, 107, 0, 0.3); color: #ffae42; }
+.dropdown-menu .cat-count { color: var(--text-muted); font-size: 12px; }
+.dropdown-menu .cat-reset {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 8px;
+  color: var(--text-muted);
+  font-style: italic;
+}
 .counter { color: var(--text-muted); font-size: 13px; }
 
 /* Graph */

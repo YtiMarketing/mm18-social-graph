@@ -31,7 +31,10 @@
     <div class="header-right">
       <button class="filter-btn active" data-filter="all">Все связи</button>
       <button class="filter-btn" data-filter="mine">Мои связи</button>
-      <button class="filter-btn" data-filter="categories">Категории</button>
+      <div class="dropdown">
+        <button class="filter-btn" id="categories-btn" data-filter="categories">Категории <span id="categories-arrow">▾</span></button>
+        <div id="categories-menu" class="dropdown-menu hidden"></div>
+      </div>
       <span class="counter" id="counter-participants">— участников</span>
       <span class="counter" id="counter-links">— связей</span>
     </div>
