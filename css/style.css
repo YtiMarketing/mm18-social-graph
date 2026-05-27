@@ -1,23 +1,35 @@
 :root {
-  --bg: #0a0a0f;
-  --bg-panel: #15151c;
-  --bg-card: #1d1d28;
+  --bg: #050510;
+  --bg-panel: rgba(20, 18, 35, 0.72);
+  --bg-panel-solid: #15131f;
+  --bg-card: rgba(35, 30, 55, 0.55);
   --text: #e8e8ee;
   --text-muted: #8e8ea0;
   --accent: #ff6b00;
   --participant: #4a90d9;
   --mentor: #00c853;
   --organizer: #a155b9;
-  --border: #2a2a3a;
+  --border: rgba(120, 110, 180, 0.22);
 }
 * { box-sizing: border-box; }
 html, body {
   margin: 0; padding: 0;
   height: 100%;
-  background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow: hidden;
+  /* deep space gradient: фиолетовый туман сверху, бирюзовый снизу-справа, чёрная база */
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(80, 40, 140, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 100%, rgba(20, 80, 160, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 60% 50%, rgba(40, 20, 70, 0.25) 0%, transparent 60%),
+    #050510;
+}
+/* Космический канвас под графом */
+#stars {
+  position: fixed; inset: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 .hidden { display: none !important; }
 .accent { color: var(--accent); }
@@ -26,17 +38,22 @@ html, body {
 /* Splash */
 .splash {
   position: fixed; inset: 0;
-  background: var(--bg);
+  background: rgba(5, 5, 16, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex; align-items: center; justify-content: center;
   z-index: 1000;
 }
 .splash-card {
-  background: var(--bg-card);
+  background: rgba(25, 22, 45, 0.72);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 48px;
   max-width: 480px;
   text-align: center;
+  box-shadow: 0 0 80px rgba(120, 80, 200, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 .splash-tag {
   display: inline-block;
@@ -84,6 +101,8 @@ html, body {
 header {
   position: fixed; top: 0; left: 0; right: 0; height: 56px;
   background: var(--bg-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex; align-items: center; gap: 24px;
   padding: 0 24px;
@@ -93,10 +112,16 @@ header {
 .header-center { flex: 1; max-width: 480px; }
 .header-center input {
   width: 100%; padding: 8px 16px;
-  background: var(--bg-card);
+  background: rgba(35, 30, 55, 0.55);
   border: 1px solid var(--border);
   color: var(--text);
   border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.header-center input:focus {
+  border-color: rgba(255, 174, 66, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 174, 66, 0.15);
 }
 .header-right { display: flex; align-items: center; gap: 16px; margin-left: auto; }
 .filter-btn {
@@ -109,24 +134,29 @@ header {
   font-size: 14px;
 }
 .filter-btn.active {
-  background: var(--accent);
+  background: linear-gradient(135deg, #ff8a3d 0%, #ff6b00 100%);
   color: white;
   font-weight: 600;
+  box-shadow: 0 0 14px rgba(255, 107, 0, 0.45);
 }
 .counter { color: var(--text-muted); font-size: 13px; }
 
 /* Graph */
 main#graph {
   position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
-  background: var(--bg);
+  background: transparent;
+  z-index: 2;
 }
+main#graph canvas { background: transparent !important; }
 
 /* Legend */
 #legend {
   position: fixed; bottom: 16px; left: 16px;
-  background: rgba(20, 20, 28, 0.85);
+  background: rgba(20, 18, 35, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px 14px;
   font-size: 13px;
   display: flex; gap: 12px; align-items: center;
@@ -142,8 +172,10 @@ main#graph {
 /* Sidebar */
 .sidebar {
   position: fixed; top: 56px; right: 0; bottom: 0;
-  width: 320px;
-  background: var(--bg-panel);
+  width: 340px;
+  background: rgba(20, 18, 35, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-left: 1px solid var(--border);
   overflow-y: auto;
   z-index: 90;

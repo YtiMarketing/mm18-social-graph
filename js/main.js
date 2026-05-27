@@ -3,8 +3,11 @@ import { createGraph } from './graph.js';
 import { openSidebar, closeSidebar } from './sidebar.js';
 import { initSearch } from './search.js';
 import { initFilters } from './filters.js';
+import { initStars } from './stars.js';
 
 async function main() {
+  initStars(); // космический фон стартует сразу — мерцает уже на splash
+
   const dataRes = await fetch('./data/participants.json');
   const data = await dataRes.json();
 

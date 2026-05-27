@@ -1,14 +1,21 @@
 const ROLE_COLORS = {
-  self: '#ff6b00',
-  organizer: '#a155b9',
-  mentor: '#00c853',
-  participant: '#4a90d9',
+  self: '#ffae42',          // янтарь — теплее жёсткого оранжа
+  organizer: '#c87dff',     // мягкий лавандово-фиолетовый
+  mentor: '#3fd5a0',        // мятно-зелёный
+  participant: '#6aa9ff',   // светло-синий
+};
+
+const ROLE_GLOW = {
+  self: 'rgba(255,174,66,0.9)',
+  organizer: 'rgba(200,125,255,0.7)',
+  mentor: 'rgba(63,213,160,0.7)',
+  participant: 'rgba(106,169,255,0.55)',
 };
 
 const LINK_STYLE = {
-  strong: { color: 'rgba(255,107,0,0.8)', width: 2, dash: [] },
-  medium: { color: 'rgba(74,144,217,0.6)', width: 1.5, dash: [] },
-  weak:   { color: 'rgba(255,255,255,0.3)', width: 1, dash: [5, 10] },
+  strong: { color: 'rgba(255,174,66,0.55)', width: 1.6, dash: [] },
+  medium: { color: 'rgba(140,170,255,0.32)', width: 1.1, dash: [] },
+  weak:   { color: 'rgba(220,220,255,0.10)', width: 0.7, dash: [4, 8] },
 };
 
 export function createGraph(container, data, selfId, onNodeClick) {
@@ -32,7 +39,7 @@ export function createGraph(container, data, selfId, onNodeClick) {
   let highlightLinks = new Set();
 
   const graph = ForceGraph()(container)
-    .backgroundColor('#0a0a0f')
+    .backgroundColor('rgba(0,0,0,0)')
     .graphData(data)
     .nodeId('id')
     .nodeVal('val')
@@ -40,29 +47,49 @@ export function createGraph(container, data, selfId, onNodeClick) {
     .nodeLabel(n => `${n.name} (${n.role_text || n.role})`)
     .nodeCanvasObject((node, ctx, scale) => {
       const r = Math.sqrt(node.val) * 4;
-      const color = node.isSelf ? ROLE_COLORS.self : (ROLE_COLORS[node.role] || ROLE_COLORS.participant);
+      const roleKey = node.isSelf ? 'self' : (ROLE_COLORS[node.role] ? node.role : 'participant');
+      const color = ROLE_COLORS[roleKey];
+      const glow = ROLE_GLOW[roleKey];
+      const dimmed = highlightNodes.size > 0 && !highlightNodes.has(node.id);
+
+      ctx.globalAlpha = dimmed ? 0.12 : 1;
+
+      // Внешний halo — большой мягкий радиальный градиент (свечение в космосе)
+      const haloR = r * (node.isSelf ? 4.5 : 3.2);
+      const halo = ctx.createRadialGradient(node.x, node.y, r * 0.6, node.x, node.y, haloR);
+      halo.addColorStop(0, glow);
+      halo.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = halo;
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, haloR, 0, 2 * Math.PI);
+      ctx.fill();
+
+      // Основной круг ноды + shadow для дополнительного «звёздного» свечения
+      ctx.shadowBlur = node.isSelf ? 18 : 10;
+      ctx.shadowColor = glow;
       ctx.beginPath();
       ctx.arc(node.x, node.y, r, 0, 2 * Math.PI);
       ctx.fillStyle = color;
-      const dimmed = highlightNodes.size > 0 && !highlightNodes.has(node.id);
-      ctx.globalAlpha = dimmed ? 0.1 : 1;
       ctx.fill();
-      ctx.strokeStyle = '#0a0a0f';
-      ctx.lineWidth = 1.5;
+      ctx.shadowBlur = 0;
+
+      // Тонкий лайт-обводка
+      ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+      ctx.lineWidth = 1;
       ctx.stroke();
 
       // Инициалы
-      ctx.fillStyle = 'white';
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
       ctx.font = `bold ${Math.max(8, r * 0.7)}px sans-serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(node.avatar_initials || '??', node.x, node.y);
 
       // Подпись имени под узлом (только при достаточном zoom)
-      if (scale > 1.2) {
-        ctx.fillStyle = '#e8e8ee';
+      if (scale > 1.0) {
+        ctx.fillStyle = 'rgba(232,232,238,0.85)';
         ctx.font = '10px sans-serif';
-        ctx.fillText(node.name.split(' ')[0], node.x, node.y + r + 8);
+        ctx.fillText(node.name.split(' ')[0], node.x, node.y + r + 10);
       }
       ctx.globalAlpha = 1;
     })
@@ -103,10 +130,12 @@ export function createGraph(container, data, selfId, onNodeClick) {
       }
     });
 
-  graph.d3Force('charge').strength(-400).distanceMax(800);
+  // Разрядка как в Obsidian Graph View: ноды далеко друг от друга,
+  // strong-связи мягко притягивают, weak почти не влияют.
+  graph.d3Force('charge').strength(-900).distanceMax(1200);
   graph.d3Force('link')
-    .distance(l => l.type === 'strong' ? 70 : (l.type === 'medium' ? 130 : 260))
-    .strength(l => l.type === 'strong' ? 0.5 : (l.type === 'medium' ? 0.2 : 0.02));
+    .distance(l => l.type === 'strong' ? 120 : (l.type === 'medium' ? 220 : 400))
+    .strength(l => l.type === 'strong' ? 0.35 : (l.type === 'medium' ? 0.1 : 0.005));
 
   return {
     instance: graph,
