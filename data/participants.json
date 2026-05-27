@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-27T18:42:01.338Z",
+  "generated_at": "2026-05-27T20:31:06.561Z",
   "nodes": [
     {
       "id": "artur_shamalov",
       "name": "Artur Shamalov",
       "telegram": "artur_shamalov",
-      "role": "participant",
+      "role": "organizer",
       "city": "Москва",
       "role_text": "серийный предприниматель, инвестор",
       "tags": [
@@ -25,6 +25,51 @@
       ],
       "bio": "Серийный предприниматель с 14 лет, привлёк ~$70M инвестиций. Продавал компании Mail.ru, Сберу, X5. Сооснователь Jiffy (доставка продуктов в Лондоне). Ведёт мастермайнд для предпринимателей, менторит стартапы.",
       "avatar_initials": "AS"
+    },
+    {
+      "id": "rybioshka",
+      "name": "Katerina",
+      "telegram": "rybioshka",
+      "role": "organizer",
+      "city": "Санкт-Петербург",
+      "role_text": "организатор мастермайнда",
+      "tags": [
+        "образование",
+        "консалтинг",
+        "услуги"
+      ],
+      "request": [],
+      "offer": [
+        "обмен опытом"
+      ],
+      "bio": "Член команды организаторов Мастермайнда Артура Шамалова. Занимается коммуникацией с участниками, организацией выездов и логистикой мероприятий.",
+      "avatar_initials": "K"
+    },
+    {
+      "id": "Roman_Shayakhmetov",
+      "name": "Roman",
+      "telegram": "Roman_Shayakhmetov",
+      "role": "organizer",
+      "city": "Москва",
+      "role_text": "организатор Mastermind",
+      "tags": [
+        "B2B",
+        "продажи",
+        "IT",
+        "услуги",
+        "образование"
+      ],
+      "request": [
+        "партнёр",
+        "обмен опытом"
+      ],
+      "offer": [
+        "партнёр",
+        "обмен опытом",
+        "консалтинг"
+      ],
+      "bio": "Организатор Mastermind, отвечает за финансы и систему выездов. Экспертиза в B2B продажах — реализовал технику Apple на 1+ млрд ₽ в крупнейшие банки и IT-компании. Также развивает бизнес в сфере услуг для животных и коневодства.",
+      "avatar_initials": "R"
     },
     {
       "id": "geovector14",
@@ -1154,25 +1199,6 @@
       "avatar_initials": "MY"
     },
     {
-      "id": "rybioshka",
-      "name": "Katerina",
-      "telegram": "rybioshka",
-      "role": "participant",
-      "city": "Санкт-Петербург",
-      "role_text": "организатор мастермайнда",
-      "tags": [
-        "образование",
-        "консалтинг",
-        "услуги"
-      ],
-      "request": [],
-      "offer": [
-        "обмен опытом"
-      ],
-      "bio": "Член команды организаторов Мастермайнда Артура Шамалова. Занимается коммуникацией с участниками, организацией выездов и логистикой мероприятий.",
-      "avatar_initials": "K"
-    },
-    {
       "id": "ErmolovSTR",
       "name": "Александр Ермолов",
       "telegram": "ErmolovSTR",
@@ -1712,32 +1738,6 @@
       "avatar_initials": "АО"
     },
     {
-      "id": "Roman_Shayakhmetov",
-      "name": "Roman",
-      "telegram": "Roman_Shayakhmetov",
-      "role": "participant",
-      "city": "Москва",
-      "role_text": "организатор Mastermind",
-      "tags": [
-        "B2B",
-        "продажи",
-        "IT",
-        "услуги",
-        "образование"
-      ],
-      "request": [
-        "партнёр",
-        "обмен опытом"
-      ],
-      "offer": [
-        "партнёр",
-        "обмен опытом",
-        "консалтинг"
-      ],
-      "bio": "Организатор Mastermind, отвечает за финансы и систему выездов. Экспертиза в B2B продажах — реализовал технику Apple на 1+ млрд ₽ в крупнейшие банки и IT-компании. Также развивает бизнес в сфере услуг для животных и коневодства.",
-      "avatar_initials": "R"
-    },
-    {
       "id": "av_yanovskaya",
       "name": "Анастасия Яновская",
       "telegram": "av_yanovskaya",
@@ -1849,6 +1849,18 @@
     }
   ],
   "links": [
+    {
+      "source": "artur_shamalov",
+      "target": "rybioshka",
+      "type": "strong",
+      "reason": "Artur Shamalov ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "artur_shamalov",
+      "target": "Roman_Shayakhmetov",
+      "type": "strong",
+      "reason": "Artur Shamalov ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Artur Shamalov это есть"
+    },
     {
       "source": "artur_shamalov",
       "target": "geovector14",
@@ -2139,12 +2151,6 @@
     },
     {
       "source": "artur_shamalov",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Artur Shamalov ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "artur_shamalov",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Artur Shamalov это есть"
@@ -2277,12 +2283,6 @@
     },
     {
       "source": "artur_shamalov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Artur Shamalov ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Artur Shamalov это есть"
-    },
-    {
-      "source": "artur_shamalov",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Artur Shamalov ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом, ментор — у Artur Shamalov это есть"
@@ -2307,6 +2307,852 @@
     },
     {
       "source": "artur_shamalov",
+      "target": "tg:388221696",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Roman_Shayakhmetov",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "geovector14",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Iren_Sergee_va",
+      "type": "strong",
+      "reason": "Irina Sergeeva ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "danilov9999",
+      "type": "strong",
+      "reason": "Данилов Алексей ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Dimozor",
+      "type": "medium",
+      "reason": "Общие темы: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Ser26anev",
+      "type": "medium",
+      "reason": "Общие темы: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "SergeiTopal",
+      "type": "weak",
+      "reason": "Общий тег: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "DGulya1",
+      "type": "strong",
+      "reason": "Gulnara ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Pavel_MPV77",
+      "type": "strong",
+      "reason": "Павел Мыльников ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "sem_and",
+      "type": "strong",
+      "reason": "Андрей Сёмочкин ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Abubekerff",
+      "type": "strong",
+      "reason": "Абубекер Мурзагельдиев ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "neyrofeya",
+      "type": "medium",
+      "reason": "Общие темы: образование, услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Ravdugina_Oksana",
+      "type": "strong",
+      "reason": "Оксана Равдугина ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Almaz_sagdiev",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Nikolai_Kireev",
+      "type": "strong",
+      "reason": "Nikolai Строитель Kireev ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Gelver_Batya",
+      "type": "weak",
+      "reason": "Общий тег: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "vyacheslavkuznetcov",
+      "type": "strong",
+      "reason": "Vyacheslav Kuznetsov Kuznetsov ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "BeganskiyStanislav",
+      "type": "strong",
+      "reason": "Stanislav ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Mconsalting",
+      "type": "medium",
+      "reason": "Один город: Санкт-Петербург"
+    },
+    {
+      "source": "rybioshka",
+      "target": "AnnaMatytsina",
+      "type": "strong",
+      "reason": "Анна Матыцина ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "aa_dayds",
+      "type": "strong",
+      "reason": "Анна ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "tata_fea",
+      "type": "strong",
+      "reason": "Татьяна Горчакова Горчакова ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "dina_skr",
+      "type": "strong",
+      "reason": "Dina ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "tretiakovna",
+      "type": "medium",
+      "reason": "Один город: Санкт-Петербург"
+    },
+    {
+      "source": "rybioshka",
+      "target": "dzhigadanil",
+      "type": "weak",
+      "reason": "Общий тег: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "zvereva_natali",
+      "type": "strong",
+      "reason": "Наталья Зверева ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "KirillBerezovski",
+      "type": "weak",
+      "reason": "Общий тег: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "loguar_amir",
+      "type": "strong",
+      "reason": "Амир⚖️ ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "dinsmv",
+      "type": "strong",
+      "reason": "Мадина Насимова ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "mitrofanlem",
+      "type": "strong",
+      "reason": "Дмитрий А ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "DMTRGRN",
+      "type": "strong",
+      "reason": "Дмитрий Николаевич Николаевич ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "mr_sevast",
+      "type": "strong",
+      "reason": "Michael Sеvast ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "dmitry_savinov",
+      "type": "weak",
+      "reason": "Общий тег: услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "anastasiya_ott",
+      "type": "medium",
+      "reason": "Общие темы: образование, услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Stepanov_Yti",
+      "type": "strong",
+      "reason": "Александр Степанов ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "feelmyimba13",
+      "type": "strong",
+      "reason": "Vladislav B ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "yaroslavmuratov",
+      "type": "strong",
+      "reason": "Ярослав Муратов ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "zema15",
+      "type": "strong",
+      "reason": "Denis ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "yuralitvinko",
+      "type": "strong",
+      "reason": "Yura Litvinko ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "nastenka_trukhanova",
+      "type": "strong",
+      "reason": "Анастасия Труханова ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "nikolay_zlat",
+      "type": "strong",
+      "reason": "Общие темы: образование, услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Kem_Olga",
+      "type": "strong",
+      "reason": "Ольга Кемрина Кемрина ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "kostara",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "rybioshka",
+      "target": "yurimilutka",
+      "type": "strong",
+      "reason": "Milutka Yuri ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "ErmolovSTR",
+      "type": "strong",
+      "reason": "Александр Ермолов ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "gberg1",
+      "type": "medium",
+      "reason": "Один город: Санкт-Петербург"
+    },
+    {
+      "source": "rybioshka",
+      "target": "MikhailStep",
+      "type": "strong",
+      "reason": "Михаил Степанов ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "G_geo",
+      "type": "strong",
+      "reason": "Кирилл Гильдия Геодезистов Гильдия Геодезистов ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "ShamanicMedicine",
+      "type": "strong",
+      "reason": "Михаил ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "Almazz111",
+      "type": "strong",
+      "reason": "Алмаз Андреев Андреев ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "brazzil23",
+      "type": "strong",
+      "reason": "Зинур ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "denis_lysenko",
+      "type": "strong",
+      "reason": "Denis Lysenko ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "iserat",
+      "type": "strong",
+      "reason": "Sergei Yaroshenko ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "AMaksimchenkov",
+      "type": "strong",
+      "reason": "Алексей Максимченков ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "nzapasnikov",
+      "type": "strong",
+      "reason": "Nikita Zapasnikov ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "VadimGlukhov",
+      "type": "strong",
+      "reason": "Вадим Глухов ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "rameevandrey",
+      "type": "strong",
+      "reason": "Андрей Рамеев ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "OKOKOK18",
+      "type": "strong",
+      "reason": "O K ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "KatkovAlexey",
+      "type": "strong",
+      "reason": "Общие темы: консалтинг, услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "vorogushin",
+      "type": "strong",
+      "reason": "Ivan Vorogushin ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "secretnikita",
+      "type": "strong",
+      "reason": "@NikitaSecret Трейдинг в сердце ❤️ ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "gerolaytis",
+      "type": "medium",
+      "reason": "Общие темы: консалтинг, услуги"
+    },
+    {
+      "source": "rybioshka",
+      "target": "MaratBLLNR",
+      "type": "weak",
+      "reason": "Общий тег: образование"
+    },
+    {
+      "source": "rybioshka",
+      "target": "artembiz",
+      "type": "medium",
+      "reason": "Один город: Санкт-Петербург"
+    },
+    {
+      "source": "rybioshka",
+      "target": "av_yanovskaya",
+      "type": "strong",
+      "reason": "Анастасия Яновская ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "tg:446458305",
+      "type": "strong",
+      "reason": "Илья ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "tg:1563443431",
+      "type": "strong",
+      "reason": "Михаил Семененко ищет: обмен опытом — у Katerina это есть"
+    },
+    {
+      "source": "rybioshka",
+      "target": "tg:783748278",
+      "type": "medium",
+      "reason": "Один город: Санкт-Петербург"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "geovector14",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр, обмен опытом — у Oleg Karnaukhov это есть · Oleg Karnaukhov ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Iren_Sergee_va",
+      "type": "strong",
+      "reason": "Irina Sergeeva ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "danilov9999",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Данилов Алексей это есть · Данилов Алексей ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Dimozor",
+      "type": "weak",
+      "reason": "Общий тег: услуги"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Ser26anev",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Анатолий Сергеев это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "SergeiTopal",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Сергей Топал это есть · Сергей Топал ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "DGulya1",
+      "type": "strong",
+      "reason": "Gulnara ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Pavel_MPV77",
+      "type": "strong",
+      "reason": "Павел Мыльников ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "sem_and",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Андрей Сёмочкин это есть · Андрей Сёмочкин ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Abubekerff",
+      "type": "strong",
+      "reason": "Абубекер Мурзагельдиев ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "neyrofeya",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Анна Киреева это есть · Анна Киреева ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Ravdugina_Oksana",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Оксана Равдугина это есть · Оксана Равдугина ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Almaz_sagdiev",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Алмаз Сагдиев это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Nikolai_Kireev",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Nikolai Строитель Kireev это есть · Nikolai Строитель Kireev ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Gelver_Batya",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у gelver_batya это есть · gelver_batya ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "vyacheslavkuznetcov",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр — у Vyacheslav Kuznetsov Kuznetsov это есть · Vyacheslav Kuznetsov Kuznetsov ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "BeganskiyStanislav",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Stanislav это есть · Stanislav ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Mconsalting",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Марина это есть · Марина ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "AnnaMatytsina",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Анна Матыцина это есть · Анна Матыцина ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "aa_dayds",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Анна это есть · Анна ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "tata_fea",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр — у Татьяна Горчакова Горчакова это есть · Татьяна Горчакова Горчакова ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "dina_skr",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр, обмен опытом — у Dina это есть · Dina ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "tretiakovna",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Nick Tretiakov это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "dzhigadanil",
+      "type": "medium",
+      "reason": "Один город: Москва"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "belonogov_b",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Bogdan Belonogov это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "zvereva_natali",
+      "type": "strong",
+      "reason": "Наталья Зверева ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "KirillBerezovski",
+      "type": "medium",
+      "reason": "Общие темы: B2B, IT, услуги"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "loguar_amir",
+      "type": "strong",
+      "reason": "Амир⚖️ ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "dinsmv",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Мадина Насимова это есть · Мадина Насимова ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "mitrofanlem",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Дмитрий А это есть · Дмитрий А ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "DMTRGRN",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Дмитрий Николаевич Николаевич это есть · Дмитрий Николаевич Николаевич ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "mr_sevast",
+      "type": "strong",
+      "reason": "Michael Sеvast ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "dmitry_savinov",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Dmitry Savinov это есть · Dmitry Savinov ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "anastasiya_ott",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у 💎Анастасия это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Stepanov_Yti",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр, обмен опытом — у Александр Степанов это есть · Александр Степанов ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "feelmyimba13",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Vladislav B это есть · Vladislav B ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "yaroslavmuratov",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр — у Ярослав Муратов это есть · Ярослав Муратов ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "zema15",
+      "type": "strong",
+      "reason": "Denis ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "yuralitvinko",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Yura Litvinko это есть · Yura Litvinko ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "faustov_ds",
+      "type": "medium",
+      "reason": "Общие темы: B2B, продажи"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "nastenka_trukhanova",
+      "type": "strong",
+      "reason": "Анастасия Труханова ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "nikolay_zlat",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр — у Николай Голубев это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Kem_Olga",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Ольга Кемрина Кемрина это есть · Ольга Кемрина Кемрина ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "eldoradis",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Alex это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "kostara",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Константин Рахманов это есть · Константин Рахманов ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "yurimilutka",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "ErmolovSTR",
+      "type": "strong",
+      "reason": "Александр Ермолов ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "gberg1",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Галина Берг BERG HOUSE🏵️ это есть · Галина Берг BERG HOUSE🏵️ ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "MikhailStep",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Михаил Степанов это есть · Михаил Степанов ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "G_geo",
+      "type": "strong",
+      "reason": "Кирилл Гильдия Геодезистов Гильдия Геодезистов ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "ShamanicMedicine",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Михаил это есть · Михаил ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "Almazz111",
+      "type": "strong",
+      "reason": "Алмаз Андреев Андреев ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "brazzil23",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Зинур это есть · Зинур ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "denis_lysenko",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Denis Lysenko это есть · Denis Lysenko ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "iserat",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Sergei Yaroshenko это есть · Sergei Yaroshenko ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "AMaksimchenkov",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Алексей Максимченков это есть · Алексей Максимченков ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "nzapasnikov",
+      "type": "strong",
+      "reason": "Nikita Zapasnikov ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "xlevinx",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Владимир Инвестор Левин это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "zaripovartur",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Artur Zaripov это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "VadimGlukhov",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Вадим Глухов это есть · Вадим Глухов ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "rameevandrey",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр, обмен опытом — у Андрей Рамеев это есть · Андрей Рамеев ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "OKOKOK18",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр — у O K это есть · O K ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "KatkovAlexey",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Alexey Katkov это есть · Alexey Katkov ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "vorogushin",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Ivan Vorogushin это есть · Ivan Vorogushin ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "secretnikita",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у @NikitaSecret Трейдинг в сердце ❤️ это есть · @NikitaSecret Трейдинг в сердце ❤️ ищет: партнёр, обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "gerolaytis",
+      "type": "strong",
+      "reason": "Roman ищет: партнёр — у Igor Gerolaytis это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "MaratBLLNR",
+      "type": "medium",
+      "reason": "Общие темы: B2B, образование"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "artembiz",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Артем Орлов Орлов это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "av_yanovskaya",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "tg:446458305",
+      "type": "strong",
+      "reason": "Илья ищет: обмен опытом — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "tg:1563443431",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Михаил Семененко это есть · Михаил Семененко ищет: обмен опытом, партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
+      "target": "tg:783748278",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Ростилав Мельницкий это есть · Ростилав Мельницкий ищет: партнёр — у Roman это есть"
+    },
+    {
+      "source": "Roman_Shayakhmetov",
       "target": "tg:388221696",
       "type": "medium",
       "reason": "Один город: Москва"
@@ -2577,12 +3423,6 @@
     },
     {
       "source": "geovector14",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: консалтинг"
-    },
-    {
-      "source": "geovector14",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Oleg Karnaukhov это есть"
@@ -2712,12 +3552,6 @@
       "target": "artembiz",
       "type": "medium",
       "reason": "Общие темы: консалтинг, инвест, B2B"
-    },
-    {
-      "source": "geovector14",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Oleg Karnaukhov ищет: партнёр — у Roman это есть · Roman ищет: партнёр, обмен опытом — у Oleg Karnaukhov это есть"
     },
     {
       "source": "geovector14",
@@ -2991,12 +3825,6 @@
     },
     {
       "source": "Iren_Sergee_va",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Irina Sergeeva ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "Iren_Sergee_va",
       "target": "gberg1",
       "type": "strong",
       "reason": "Irina Sergeeva ищет: обмен опытом — у Галина Берг BERG HOUSE🏵️ это есть"
@@ -3120,12 +3948,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Irina Sergeeva ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "Iren_Sergee_va",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Irina Sergeeva ищет: обмен опытом, партнёр — у Roman это есть"
     },
     {
       "source": "Iren_Sergee_va",
@@ -3411,12 +4233,6 @@
     },
     {
       "source": "danilov9999",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Данилов Алексей ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "danilov9999",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Данилов Алексей это есть"
@@ -3546,12 +4362,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Данилов Алексей ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Данилов Алексей это есть"
-    },
-    {
-      "source": "danilov9999",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Данилов Алексей ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Данилов Алексей это есть"
     },
     {
       "source": "danilov9999",
@@ -3765,12 +4575,6 @@
     },
     {
       "source": "Dimozor",
-      "target": "rybioshka",
-      "type": "medium",
-      "reason": "Общие темы: услуги"
-    },
-    {
-      "source": "Dimozor",
       "target": "gberg1",
       "type": "weak",
       "reason": "Общий тег: услуги"
@@ -3846,12 +4650,6 @@
       "target": "MaratBLLNR",
       "type": "weak",
       "reason": "Общий тег: логистика"
-    },
-    {
-      "source": "Dimozor",
-      "target": "Roman_Shayakhmetov",
-      "type": "weak",
-      "reason": "Общий тег: услуги"
     },
     {
       "source": "Dimozor",
@@ -4095,12 +4893,6 @@
     },
     {
       "source": "Ser26anev",
-      "target": "rybioshka",
-      "type": "medium",
-      "reason": "Общие темы: услуги"
-    },
-    {
-      "source": "Ser26anev",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Анатолий Сергеев это есть"
@@ -4212,12 +5004,6 @@
       "target": "gerolaytis",
       "type": "medium",
       "reason": "Один город: Москва"
-    },
-    {
-      "source": "Ser26anev",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Анатолий Сергеев это есть"
     },
     {
       "source": "Ser26anev",
@@ -4479,12 +5265,6 @@
     },
     {
       "source": "SergeiTopal",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: услуги"
-    },
-    {
-      "source": "SergeiTopal",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Сергей Топал это есть"
@@ -4614,12 +5394,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Артем Орлов Орлов ищет: ментор — у Сергей Топал это есть"
-    },
-    {
-      "source": "SergeiTopal",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Сергей Топал ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Сергей Топал это есть"
     },
     {
       "source": "SergeiTopal",
@@ -4869,12 +5643,6 @@
     },
     {
       "source": "DGulya1",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Gulnara ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "DGulya1",
       "target": "ErmolovSTR",
       "type": "medium",
       "reason": "Один город: Москва"
@@ -4986,12 +5754,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Gulnara ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "DGulya1",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Gulnara ищет: обмен опытом — у Roman это есть"
     },
     {
       "source": "DGulya1",
@@ -5247,12 +6009,6 @@
     },
     {
       "source": "Pavel_MPV77",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Павел Мыльников ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "Pavel_MPV77",
       "target": "gberg1",
       "type": "strong",
       "reason": "Павел Мыльников ищет: обмен опытом — у Галина Берг BERG HOUSE🏵️ это есть"
@@ -5370,12 +6126,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Павел Мыльников ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "Pavel_MPV77",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Павел Мыльников ищет: обмен опытом, партнёр — у Roman это есть"
     },
     {
       "source": "Pavel_MPV77",
@@ -5625,12 +6375,6 @@
     },
     {
       "source": "sem_and",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Андрей Сёмочкин ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "sem_and",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Андрей Сёмочкин это есть"
@@ -5760,12 +6504,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Андрей Сёмочкин ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "sem_and",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Андрей Сёмочкин ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Андрей Сёмочкин это есть"
     },
     {
       "source": "sem_and",
@@ -6021,12 +6759,6 @@
     },
     {
       "source": "Abubekerff",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Абубекер Мурзагельдиев ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "Abubekerff",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Абубекер Мурзагельдиев ищет: ментор — у Александр Ермолов это есть"
@@ -6156,12 +6888,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Абубекер Мурзагельдиев ищет: обмен опытом, ментор — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "Abubekerff",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Абубекер Мурзагельдиев ищет: обмен опытом — у Roman это есть"
     },
     {
       "source": "Abubekerff",
@@ -6375,12 +7101,6 @@
     },
     {
       "source": "neyrofeya",
-      "target": "rybioshka",
-      "type": "medium",
-      "reason": "Общие темы: образование, услуги"
-    },
-    {
-      "source": "neyrofeya",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Анна Киреева это есть"
@@ -6498,12 +7218,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Артем Орлов Орлов ищет: ментор — у Анна Киреева это есть"
-    },
-    {
-      "source": "neyrofeya",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Анна Киреева ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Анна Киреева это есть"
     },
     {
       "source": "neyrofeya",
@@ -6741,12 +7455,6 @@
     },
     {
       "source": "Ravdugina_Oksana",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Оксана Равдугина ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "Ravdugina_Oksana",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Оксана Равдугина это есть"
@@ -6876,12 +7584,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Оксана Равдугина ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Оксана Равдугина это есть"
-    },
-    {
-      "source": "Ravdugina_Oksana",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Оксана Равдугина ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Оксана Равдугина это есть"
     },
     {
       "source": "Ravdugina_Oksana",
@@ -7095,12 +7797,6 @@
     },
     {
       "source": "Almaz_sagdiev",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: консалтинг"
-    },
-    {
-      "source": "Almaz_sagdiev",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Алмаз Сагдиев это есть"
@@ -7230,12 +7926,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Артем Орлов Орлов ищет: ментор — у Алмаз Сагдиев это есть"
-    },
-    {
-      "source": "Almaz_sagdiev",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Алмаз Сагдиев это есть"
     },
     {
       "source": "Almaz_sagdiev",
@@ -7467,12 +8157,6 @@
     },
     {
       "source": "Nikolai_Kireev",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Nikolai Строитель Kireev ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "Nikolai_Kireev",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Nikolai Строитель Kireev это есть"
@@ -7602,12 +8286,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Nikolai Строитель Kireev ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Nikolai Строитель Kireev это есть"
-    },
-    {
-      "source": "Nikolai_Kireev",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Nikolai Строитель Kireev ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Nikolai Строитель Kireev это есть"
     },
     {
       "source": "Nikolai_Kireev",
@@ -7827,12 +8505,6 @@
     },
     {
       "source": "Gelver_Batya",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: услуги"
-    },
-    {
-      "source": "Gelver_Batya",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у gelver_batya это есть"
@@ -7962,12 +8634,6 @@
       "target": "artembiz",
       "type": "weak",
       "reason": "Общий тег: B2B"
-    },
-    {
-      "source": "Gelver_Batya",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "gelver_batya ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у gelver_batya это есть"
     },
     {
       "source": "Gelver_Batya",
@@ -8187,12 +8853,6 @@
     },
     {
       "source": "vyacheslavkuznetcov",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Vyacheslav Kuznetsov Kuznetsov ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "vyacheslavkuznetcov",
       "target": "ErmolovSTR",
       "type": "weak",
       "reason": "Общий тег: продажи"
@@ -8316,12 +8976,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Vyacheslav Kuznetsov Kuznetsov ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "vyacheslavkuznetcov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Vyacheslav Kuznetsov Kuznetsov ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: партнёр — у Vyacheslav Kuznetsov Kuznetsov это есть"
     },
     {
       "source": "vyacheslavkuznetcov",
@@ -8541,12 +9195,6 @@
     },
     {
       "source": "BeganskiyStanislav",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Stanislav ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "BeganskiyStanislav",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Stanislav ищет: ментор — у Александр Ермолов это есть · Александр Ермолов ищет: обмен опытом — у Stanislav это есть"
@@ -8676,12 +9324,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Stanislav ищет: обмен опытом, ментор — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "BeganskiyStanislav",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Stanislav ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Stanislav это есть"
     },
     {
       "source": "BeganskiyStanislav",
@@ -8865,12 +9507,6 @@
     },
     {
       "source": "Mconsalting",
-      "target": "rybioshka",
-      "type": "medium",
-      "reason": "Один город: Санкт-Петербург"
-    },
-    {
-      "source": "Mconsalting",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Марина это есть"
@@ -9000,12 +9636,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Общие темы: консалтинг, финансы, управленческий учёт"
-    },
-    {
-      "source": "Mconsalting",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Марина ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Марина это есть"
     },
     {
       "source": "Mconsalting",
@@ -9183,12 +9813,6 @@
     },
     {
       "source": "AnnaMatytsina",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Анна Матыцина ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "AnnaMatytsina",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Анна Матыцина это есть"
@@ -9312,12 +9936,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Анна Матыцина ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Анна Матыцина это есть"
-    },
-    {
-      "source": "AnnaMatytsina",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Анна Матыцина ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Анна Матыцина это есть"
     },
     {
       "source": "AnnaMatytsina",
@@ -9723,12 +10341,6 @@
     },
     {
       "source": "aa_dayds",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Анна ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "aa_dayds",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Анна ищет: ментор — у Александр Ермолов это есть · Александр Ермолов ищет: обмен опытом — у Анна это есть"
@@ -9852,12 +10464,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Анна ищет: обмен опытом, ментор — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "aa_dayds",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Анна ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Анна это есть"
     },
     {
       "source": "aa_dayds",
@@ -10035,12 +10641,6 @@
     },
     {
       "source": "tata_fea",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Татьяна Горчакова Горчакова ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "tata_fea",
       "target": "ErmolovSTR",
       "type": "medium",
       "reason": "Общие темы: продажи, консалтинг, образование"
@@ -10164,12 +10764,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Татьяна Горчакова Горчакова ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Татьяна Горчакова Горчакова это есть"
-    },
-    {
-      "source": "tata_fea",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Татьяна Горчакова Горчакова ищет: обмен опытом — у Roman это есть · Roman ищет: партнёр — у Татьяна Горчакова Горчакова это есть"
     },
     {
       "source": "tata_fea",
@@ -10341,12 +10935,6 @@
     },
     {
       "source": "dina_skr",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Dina ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "dina_skr",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Dina это есть"
@@ -10476,12 +11064,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Dina ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "dina_skr",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Dina ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: партнёр, обмен опытом — у Dina это есть"
     },
     {
       "source": "dina_skr",
@@ -10641,12 +11223,6 @@
     },
     {
       "source": "tretiakovna",
-      "target": "rybioshka",
-      "type": "medium",
-      "reason": "Один город: Санкт-Петербург"
-    },
-    {
-      "source": "tretiakovna",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Nick Tretiakov это есть"
@@ -10776,12 +11352,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Артем Орлов Орлов ищет: ментор — у Nick Tretiakov это есть"
-    },
-    {
-      "source": "tretiakovna",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Nick Tretiakov это есть"
     },
     {
       "source": "tretiakovna",
@@ -10941,12 +11511,6 @@
     },
     {
       "source": "dzhigadanil",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: услуги"
-    },
-    {
-      "source": "dzhigadanil",
       "target": "ErmolovSTR",
       "type": "medium",
       "reason": "Один город: Москва"
@@ -11044,12 +11608,6 @@
     {
       "source": "dzhigadanil",
       "target": "gerolaytis",
-      "type": "medium",
-      "reason": "Один город: Москва"
-    },
-    {
-      "source": "dzhigadanil",
-      "target": "Roman_Shayakhmetov",
       "type": "medium",
       "reason": "Один город: Москва"
     },
@@ -11337,12 +11895,6 @@
     },
     {
       "source": "belonogov_b",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Bogdan Belonogov это есть"
-    },
-    {
-      "source": "belonogov_b",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом — у Bogdan Belonogov это есть"
@@ -11499,12 +12051,6 @@
     },
     {
       "source": "zvereva_natali",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Наталья Зверева ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "zvereva_natali",
       "target": "ErmolovSTR",
       "type": "medium",
       "reason": "Общие темы: образование, консалтинг, менторство"
@@ -11628,12 +12174,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Наталья Зверева ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Наталья Зверева это есть"
-    },
-    {
-      "source": "zvereva_natali",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Наталья Зверева ищет: обмен опытом — у Roman это есть"
     },
     {
       "source": "zvereva_natali",
@@ -11787,12 +12327,6 @@
     },
     {
       "source": "KirillBerezovski",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: услуги"
-    },
-    {
-      "source": "KirillBerezovski",
       "target": "ErmolovSTR",
       "type": "medium",
       "reason": "Один город: Москва"
@@ -11910,12 +12444,6 @@
       "target": "artembiz",
       "type": "weak",
       "reason": "Общий тег: B2B"
-    },
-    {
-      "source": "KirillBerezovski",
-      "target": "Roman_Shayakhmetov",
-      "type": "medium",
-      "reason": "Общие темы: B2B, услуги, IT"
     },
     {
       "source": "KirillBerezovski",
@@ -12051,12 +12579,6 @@
     },
     {
       "source": "loguar_amir",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Амир⚖️ ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "loguar_amir",
       "target": "ErmolovSTR",
       "type": "medium",
       "reason": "Один город: Москва"
@@ -12180,12 +12702,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Амир⚖️ ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "loguar_amir",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Амир⚖️ ищет: обмен опытом, партнёр — у Roman это есть"
     },
     {
       "source": "loguar_amir",
@@ -12321,12 +12837,6 @@
     },
     {
       "source": "dinsmv",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Мадина Насимова ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "dinsmv",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Мадина Насимова ищет: ментор — у Александр Ермолов это есть · Александр Ермолов ищет: обмен опытом — у Мадина Насимова это есть"
@@ -12450,12 +12960,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Мадина Насимова ищет: обмен опытом, ментор — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "dinsmv",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Мадина Насимова ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Мадина Насимова это есть"
     },
     {
       "source": "dinsmv",
@@ -12585,12 +13089,6 @@
     },
     {
       "source": "mitrofanlem",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Дмитрий А ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "mitrofanlem",
       "target": "ErmolovSTR",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Дмитрий А это есть"
@@ -12717,12 +13215,6 @@
     },
     {
       "source": "mitrofanlem",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Дмитрий А ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Дмитрий А это есть"
-    },
-    {
-      "source": "mitrofanlem",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Дмитрий А ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Дмитрий А это есть"
@@ -12840,12 +13332,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Дмитрий Николаевич Николаевич ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: обмен опытом — у Дмитрий Николаевич Николаевич это есть"
-    },
-    {
-      "source": "DMTRGRN",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Дмитрий Николаевич Николаевич ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "DMTRGRN",
@@ -12975,12 +13461,6 @@
     },
     {
       "source": "DMTRGRN",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Дмитрий Николаевич Николаевич ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Дмитрий Николаевич Николаевич это есть"
-    },
-    {
-      "source": "DMTRGRN",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Дмитрий Николаевич Николаевич ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Дмитрий Николаевич Николаевич это есть"
@@ -13080,12 +13560,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Michael Sеvast ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: ментор — у Michael Sеvast это есть"
-    },
-    {
-      "source": "mr_sevast",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Michael Sеvast ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "mr_sevast",
@@ -13215,12 +13689,6 @@
     },
     {
       "source": "mr_sevast",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Michael Sеvast ищет: партнёр, обмен опытом — у Roman это есть"
-    },
-    {
-      "source": "mr_sevast",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Michael Sеvast ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: ментор — у Michael Sеvast это есть"
@@ -13308,12 +13776,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Milutka Yuri ищет: обмен опытом — у Dmitry Savinov это есть"
-    },
-    {
-      "source": "dmitry_savinov",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: услуги"
     },
     {
       "source": "dmitry_savinov",
@@ -13431,12 +13893,6 @@
     },
     {
       "source": "dmitry_savinov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Dmitry Savinov ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Dmitry Savinov это есть"
-    },
-    {
-      "source": "dmitry_savinov",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом — у Dmitry Savinov это есть"
@@ -13524,12 +13980,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Milutka Yuri ищет: обмен опытом — у 💎Анастасия это есть"
-    },
-    {
-      "source": "anastasiya_ott",
-      "target": "rybioshka",
-      "type": "medium",
-      "reason": "Общие темы: образование, услуги"
     },
     {
       "source": "anastasiya_ott",
@@ -13659,12 +14109,6 @@
     },
     {
       "source": "anastasiya_ott",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у 💎Анастасия это есть"
-    },
-    {
-      "source": "anastasiya_ott",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом — у 💎Анастасия это есть"
@@ -13752,12 +14196,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Александр Степанов ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: обмен опытом — у Александр Степанов это есть"
-    },
-    {
-      "source": "Stepanov_Yti",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Александр Степанов ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "Stepanov_Yti",
@@ -13893,12 +14331,6 @@
     },
     {
       "source": "Stepanov_Yti",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Александр Степанов ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: партнёр, обмен опытом — у Александр Степанов это есть"
-    },
-    {
-      "source": "Stepanov_Yti",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Александр Степанов ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Александр Степанов это есть"
@@ -13992,12 +14424,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Vladislav B ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: обмен опытом — у Vladislav B это есть"
-    },
-    {
-      "source": "feelmyimba13",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Vladislav B ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "feelmyimba13",
@@ -14127,12 +14553,6 @@
     },
     {
       "source": "feelmyimba13",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Vladislav B ищет: обмен опытом, партнёр — у Roman это есть · Roman ищет: обмен опытом — у Vladislav B это есть"
-    },
-    {
-      "source": "feelmyimba13",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Vladislav B ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Vladislav B это есть"
@@ -14214,12 +14634,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Ярослав Муратов ищет: обмен опытом — у Milutka Yuri это есть"
-    },
-    {
-      "source": "yaroslavmuratov",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Ярослав Муратов ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "yaroslavmuratov",
@@ -14355,12 +14769,6 @@
     },
     {
       "source": "yaroslavmuratov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Ярослав Муратов ищет: обмен опытом — у Roman это есть · Roman ищет: партнёр — у Ярослав Муратов это есть"
-    },
-    {
-      "source": "yaroslavmuratov",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Ярослав Муратов ищет: обмен опытом — у Анастасия Яновская это есть"
@@ -14436,12 +14844,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Denis ищет: обмен опытом — у Milutka Yuri это есть"
-    },
-    {
-      "source": "zema15",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Denis ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "zema15",
@@ -14565,12 +14967,6 @@
     },
     {
       "source": "zema15",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Denis ищет: обмен опытом — у Roman это есть"
-    },
-    {
-      "source": "zema15",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Denis ищет: обмен опытом — у Анастасия Яновская это есть"
@@ -14634,12 +15030,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Yura Litvinko ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: обмен опытом, ментор — у Yura Litvinko это есть"
-    },
-    {
-      "source": "yuralitvinko",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Yura Litvinko ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "yuralitvinko",
@@ -14772,12 +15162,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Yura Litvinko ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Yura Litvinko это есть"
-    },
-    {
-      "source": "yuralitvinko",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Yura Litvinko ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Yura Litvinko это есть"
     },
     {
       "source": "yuralitvinko",
@@ -14955,12 +15339,6 @@
     },
     {
       "source": "faustov_ds",
-      "target": "Roman_Shayakhmetov",
-      "type": "medium",
-      "reason": "Общие темы: B2B, продажи"
-    },
-    {
-      "source": "faustov_ds",
       "target": "av_yanovskaya",
       "type": "weak",
       "reason": "Общий тег: продажи"
@@ -15006,12 +15384,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Анастасия Труханова ищет: обмен опытом — у Milutka Yuri это есть"
-    },
-    {
-      "source": "nastenka_trukhanova",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Анастасия Труханова ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "nastenka_trukhanova",
@@ -15135,12 +15507,6 @@
     },
     {
       "source": "nastenka_trukhanova",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Анастасия Труханова ищет: партнёр, обмен опытом — у Roman это есть"
-    },
-    {
-      "source": "nastenka_trukhanova",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Труханова ищет: обмен опытом — у Анастасия Яновская это есть"
@@ -15179,12 +15545,6 @@
       "source": "nikolay_zlat",
       "target": "yurimilutka",
       "type": "medium",
-      "reason": "Общие темы: образование, услуги"
-    },
-    {
-      "source": "nikolay_zlat",
-      "target": "rybioshka",
-      "type": "strong",
       "reason": "Общие темы: образование, услуги"
     },
     {
@@ -15303,12 +15663,6 @@
     },
     {
       "source": "nikolay_zlat",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: партнёр — у Николай Голубев это есть"
-    },
-    {
-      "source": "nikolay_zlat",
       "target": "av_yanovskaya",
       "type": "weak",
       "reason": "Общий тег: услуги"
@@ -15354,12 +15708,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Ольга Кемрина Кемрина ищет: обмен опытом — у Milutka Yuri это есть · Milutka Yuri ищет: обмен опытом, ментор — у Ольга Кемрина Кемрина это есть"
-    },
-    {
-      "source": "Kem_Olga",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Ольга Кемрина Кемрина ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "Kem_Olga",
@@ -15492,12 +15840,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Ольга Кемрина Кемрина ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Ольга Кемрина Кемрина это есть"
-    },
-    {
-      "source": "Kem_Olga",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Ольга Кемрина Кемрина ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Ольга Кемрина Кемрина это есть"
     },
     {
       "source": "Kem_Olga",
@@ -15753,12 +16095,6 @@
     },
     {
       "source": "eldoradis",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Alex это есть"
-    },
-    {
-      "source": "eldoradis",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом — у Alex это есть"
@@ -15792,12 +16128,6 @@
       "target": "yurimilutka",
       "type": "strong",
       "reason": "Milutka Yuri ищет: обмен опытом, ментор — у Константин Рахманов это есть"
-    },
-    {
-      "source": "kostara",
-      "target": "rybioshka",
-      "type": "weak",
-      "reason": "Общий тег: консалтинг"
     },
     {
       "source": "kostara",
@@ -15921,12 +16251,6 @@
     },
     {
       "source": "kostara",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Константин Рахманов ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Константин Рахманов это есть"
-    },
-    {
-      "source": "kostara",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом, ментор — у Константин Рахманов это есть"
@@ -15948,12 +16272,6 @@
       "target": "tg:388221696",
       "type": "medium",
       "reason": "Один город: Москва"
-    },
-    {
-      "source": "yurimilutka",
-      "target": "rybioshka",
-      "type": "strong",
-      "reason": "Milutka Yuri ищет: обмен опытом — у Katerina это есть"
     },
     {
       "source": "yurimilutka",
@@ -16089,12 +16407,6 @@
     },
     {
       "source": "yurimilutka",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Milutka Yuri ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Milutka Yuri это есть"
-    },
-    {
-      "source": "yurimilutka",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Milutka Yuri ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Milutka Yuri это есть"
@@ -16116,156 +16428,6 @@
       "target": "tg:783748278",
       "type": "strong",
       "reason": "Milutka Yuri ищет: обмен опытом — у Ростилав Мельницкий это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "ErmolovSTR",
-      "type": "strong",
-      "reason": "Александр Ермолов ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "gberg1",
-      "type": "medium",
-      "reason": "Один город: Санкт-Петербург"
-    },
-    {
-      "source": "rybioshka",
-      "target": "MikhailStep",
-      "type": "strong",
-      "reason": "Михаил Степанов ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "G_geo",
-      "type": "strong",
-      "reason": "Кирилл Гильдия Геодезистов Гильдия Геодезистов ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "ShamanicMedicine",
-      "type": "strong",
-      "reason": "Михаил ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "Almazz111",
-      "type": "strong",
-      "reason": "Алмаз Андреев Андреев ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "brazzil23",
-      "type": "strong",
-      "reason": "Зинур ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "denis_lysenko",
-      "type": "strong",
-      "reason": "Denis Lysenko ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "iserat",
-      "type": "strong",
-      "reason": "Sergei Yaroshenko ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "AMaksimchenkov",
-      "type": "strong",
-      "reason": "Алексей Максимченков ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "nzapasnikov",
-      "type": "strong",
-      "reason": "Nikita Zapasnikov ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "VadimGlukhov",
-      "type": "strong",
-      "reason": "Вадим Глухов ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "rameevandrey",
-      "type": "strong",
-      "reason": "Андрей Рамеев ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "OKOKOK18",
-      "type": "strong",
-      "reason": "O K ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "KatkovAlexey",
-      "type": "strong",
-      "reason": "Общие темы: консалтинг, услуги"
-    },
-    {
-      "source": "rybioshka",
-      "target": "vorogushin",
-      "type": "strong",
-      "reason": "Ivan Vorogushin ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "secretnikita",
-      "type": "strong",
-      "reason": "@NikitaSecret Трейдинг в сердце ❤️ ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "gerolaytis",
-      "type": "medium",
-      "reason": "Общие темы: консалтинг, услуги"
-    },
-    {
-      "source": "rybioshka",
-      "target": "MaratBLLNR",
-      "type": "weak",
-      "reason": "Общий тег: образование"
-    },
-    {
-      "source": "rybioshka",
-      "target": "artembiz",
-      "type": "medium",
-      "reason": "Один город: Санкт-Петербург"
-    },
-    {
-      "source": "rybioshka",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "av_yanovskaya",
-      "type": "strong",
-      "reason": "Анастасия Яновская ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "tg:446458305",
-      "type": "strong",
-      "reason": "Илья ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "tg:1563443431",
-      "type": "strong",
-      "reason": "Михаил Семененко ищет: обмен опытом — у Katerina это есть"
-    },
-    {
-      "source": "rybioshka",
-      "target": "tg:783748278",
-      "type": "medium",
-      "reason": "Один город: Санкт-Петербург"
     },
     {
       "source": "ErmolovSTR",
@@ -16374,12 +16536,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Александр Ермолов ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Александр Ермолов это есть"
-    },
-    {
-      "source": "ErmolovSTR",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Александр Ермолов ищет: обмен опытом — у Roman это есть"
     },
     {
       "source": "ErmolovSTR",
@@ -16518,12 +16674,6 @@
       "target": "artembiz",
       "type": "medium",
       "reason": "Один город: Санкт-Петербург"
-    },
-    {
-      "source": "gberg1",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Галина Берг BERG HOUSE🏵️ ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Галина Берг BERG HOUSE🏵️ это есть"
     },
     {
       "source": "gberg1",
@@ -16671,12 +16821,6 @@
     },
     {
       "source": "MikhailStep",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Михаил Степанов ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Михаил Степанов это есть"
-    },
-    {
-      "source": "MikhailStep",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Михаил Степанов ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом, ментор — у Михаил Степанов это есть"
@@ -16800,12 +16944,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Кирилл Гильдия Геодезистов Гильдия Геодезистов ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "G_geo",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Кирилл Гильдия Геодезистов Гильдия Геодезистов ищет: обмен опытом — у Roman это есть"
     },
     {
       "source": "G_geo",
@@ -16935,12 +17073,6 @@
     },
     {
       "source": "ShamanicMedicine",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Михаил ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Михаил это есть"
-    },
-    {
-      "source": "ShamanicMedicine",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Михаил ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Михаил это есть"
@@ -17049,12 +17181,6 @@
     },
     {
       "source": "Almazz111",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Алмаз Андреев Андреев ищет: обмен опытом — у Roman это есть"
-    },
-    {
-      "source": "Almazz111",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Алмаз Андреев Андреев ищет: обмен опытом — у Анастасия Яновская это есть"
@@ -17160,12 +17286,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Зинур ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Зинур это есть"
-    },
-    {
-      "source": "brazzil23",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Зинур ищет: обмен опытом, партнёр — у Roman это есть · Roman ищет: обмен опытом — у Зинур это есть"
     },
     {
       "source": "brazzil23",
@@ -17283,12 +17403,6 @@
     },
     {
       "source": "denis_lysenko",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Denis Lysenko ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Denis Lysenko это есть"
-    },
-    {
-      "source": "denis_lysenko",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Denis Lysenko ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом, ментор — у Denis Lysenko это есть"
@@ -17397,12 +17511,6 @@
     },
     {
       "source": "iserat",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Sergei Yaroshenko ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Sergei Yaroshenko это есть"
-    },
-    {
-      "source": "iserat",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Sergei Yaroshenko ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Sergei Yaroshenko это есть"
@@ -17493,12 +17601,6 @@
     },
     {
       "source": "AMaksimchenkov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Алексей Максимченков ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Алексей Максимченков это есть"
-    },
-    {
-      "source": "AMaksimchenkov",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Алексей Максимченков ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Алексей Максимченков это есть"
@@ -17580,12 +17682,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Nikita Zapasnikov ищет: обмен опытом — у Артем Орлов Орлов это есть"
-    },
-    {
-      "source": "nzapasnikov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Nikita Zapasnikov ищет: партнёр, обмен опытом — у Roman это есть"
     },
     {
       "source": "nzapasnikov",
@@ -17673,12 +17769,6 @@
     },
     {
       "source": "xlevinx",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Владимир Инвестор Левин это есть"
-    },
-    {
-      "source": "xlevinx",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом, ментор — у Владимир Инвестор Левин это есть"
@@ -17763,12 +17853,6 @@
     },
     {
       "source": "zaripovartur",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Artur Zaripov это есть"
-    },
-    {
-      "source": "zaripovartur",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Анастасия Яновская ищет: обмен опытом — у Artur Zaripov это есть"
@@ -17838,12 +17922,6 @@
       "target": "artembiz",
       "type": "strong",
       "reason": "Вадим Глухов ищет: обмен опытом — у Артем Орлов Орлов это есть · Артем Орлов Орлов ищет: ментор — у Вадим Глухов это есть"
-    },
-    {
-      "source": "VadimGlukhov",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Вадим Глухов ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Вадим Глухов это есть"
     },
     {
       "source": "VadimGlukhov",
@@ -17919,12 +17997,6 @@
     },
     {
       "source": "rameevandrey",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Андрей Рамеев ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: партнёр, обмен опытом — у Андрей Рамеев это есть"
-    },
-    {
-      "source": "rameevandrey",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Андрей Рамеев ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом, ментор — у Андрей Рамеев это есть"
@@ -17991,12 +18063,6 @@
     },
     {
       "source": "OKOKOK18",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "O K ищет: обмен опытом, партнёр — у Roman это есть · Roman ищет: партнёр — у O K это есть"
-    },
-    {
-      "source": "OKOKOK18",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "O K ищет: обмен опытом — у Анастасия Яновская это есть"
@@ -18048,12 +18114,6 @@
       "target": "artembiz",
       "type": "medium",
       "reason": "Общие темы: консалтинг, B2B"
-    },
-    {
-      "source": "KatkovAlexey",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Alexey Katkov ищет: партнёр — у Roman это есть · Roman ищет: обмен опытом — у Alexey Katkov это есть"
     },
     {
       "source": "KatkovAlexey",
@@ -18111,12 +18171,6 @@
     },
     {
       "source": "vorogushin",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Ivan Vorogushin ищет: обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у Ivan Vorogushin это есть"
-    },
-    {
-      "source": "vorogushin",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "Ivan Vorogushin ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом, ментор — у Ivan Vorogushin это есть"
@@ -18165,12 +18219,6 @@
     },
     {
       "source": "secretnikita",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "@NikitaSecret Трейдинг в сердце ❤️ ищет: партнёр, обмен опытом — у Roman это есть · Roman ищет: обмен опытом — у @NikitaSecret Трейдинг в сердце ❤️ это есть"
-    },
-    {
-      "source": "secretnikita",
       "target": "av_yanovskaya",
       "type": "strong",
       "reason": "@NikitaSecret Трейдинг в сердце ❤️ ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом, ментор — у @NikitaSecret Трейдинг в сердце ❤️ это есть"
@@ -18204,12 +18252,6 @@
       "target": "artembiz",
       "type": "medium",
       "reason": "Общие темы: консалтинг, B2B"
-    },
-    {
-      "source": "gerolaytis",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: партнёр — у Igor Gerolaytis это есть"
     },
     {
       "source": "gerolaytis",
@@ -18249,12 +18291,6 @@
     },
     {
       "source": "MaratBLLNR",
-      "target": "Roman_Shayakhmetov",
-      "type": "medium",
-      "reason": "Общие темы: образование, B2B"
-    },
-    {
-      "source": "MaratBLLNR",
       "target": "tg:1563443431",
       "type": "weak",
       "reason": "Общий тег: образование"
@@ -18270,12 +18306,6 @@
       "target": "tg:388221696",
       "type": "weak",
       "reason": "Общий тег: B2B"
-    },
-    {
-      "source": "artembiz",
-      "target": "Roman_Shayakhmetov",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Артем Орлов Орлов это есть"
     },
     {
       "source": "artembiz",
@@ -18306,36 +18336,6 @@
       "target": "tg:388221696",
       "type": "weak",
       "reason": "Общий тег: B2B"
-    },
-    {
-      "source": "Roman_Shayakhmetov",
-      "target": "av_yanovskaya",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Анастасия Яновская это есть · Анастасия Яновская ищет: обмен опытом — у Roman это есть"
-    },
-    {
-      "source": "Roman_Shayakhmetov",
-      "target": "tg:446458305",
-      "type": "strong",
-      "reason": "Илья ищет: обмен опытом — у Roman это есть"
-    },
-    {
-      "source": "Roman_Shayakhmetov",
-      "target": "tg:1563443431",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Михаил Семененко это есть · Михаил Семененко ищет: обмен опытом, партнёр — у Roman это есть"
-    },
-    {
-      "source": "Roman_Shayakhmetov",
-      "target": "tg:783748278",
-      "type": "strong",
-      "reason": "Roman ищет: обмен опытом — у Ростилав Мельницкий это есть · Ростилав Мельницкий ищет: партнёр — у Roman это есть"
-    },
-    {
-      "source": "Roman_Shayakhmetov",
-      "target": "tg:388221696",
-      "type": "medium",
-      "reason": "Один город: Москва"
     },
     {
       "source": "av_yanovskaya",
