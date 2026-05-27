@@ -252,26 +252,31 @@ main#graph canvas { background: transparent !important; }
   background: none; border: none; color: var(--text-muted);
   font-size: 22px; cursor: pointer; line-height: 1;
 }
+.profile-head {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 14px;
+}
+.profile-head-text { flex: 1; min-width: 0; }
 .profile-avatar {
   width: 56px; height: 56px;
   border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 20px;
   color: white;
-  margin-right: 12px;
-  vertical-align: middle;
+  flex-shrink: 0;
 }
-.profile-name { font-size: 20px; font-weight: 700; display: inline-block; vertical-align: middle; }
-.profile-tg { color: var(--text-muted); font-size: 14px; margin-top: 4px; }
+.profile-name { font-size: 20px; font-weight: 700; line-height: 1.2; }
+.profile-tg { color: var(--text-muted); font-size: 13px; margin-top: 2px; }
 .profile-tg a { color: var(--accent); text-decoration: none; }
 .btn-write {
   display: block; width: 100%;
   background: var(--accent); color: white;
   padding: 10px; border: none; border-radius: 8px;
   font-weight: 600; text-decoration: none; text-align: center;
-  margin: 16px 0;
+  margin-bottom: 14px;
   cursor: pointer;
 }
+.profile-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
 .pill {
   display: inline-block;
   background: var(--bg-card);
@@ -282,17 +287,90 @@ main#graph canvas { background: transparent !important; }
   font-size: 12px;
   margin: 2px;
 }
-.pill.role { background: rgba(74,144,217,0.2); border-color: var(--participant); }
-.profile-bio { margin: 16px 0; line-height: 1.5; font-size: 14px; }
-.recs-title { font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
-.rec-card {
+.pill.role { font-weight: 600; }
+.pill.role.role-participant { background: rgba(74,144,217,0.22); border-color: var(--participant); }
+.pill.role.role-mentor { background: rgba(0,200,83,0.22); border-color: var(--mentor); }
+.pill.role.role-organizer { background: rgba(161,85,185,0.22); border-color: var(--organizer); }
+.pill-want { background: rgba(255,107,0,0.15); border-color: rgba(255,107,0,0.45); color: #ffcfa4; }
+.pill-offer { background: rgba(141,79,255,0.18); border-color: rgba(141,79,255,0.45); color: #d4baff; }
+
+.tabs {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+.tab {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 8px 0 10px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.tab.active .tab-count { color: var(--accent); }
+
+.section { margin-bottom: 16px; }
+.section-title {
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.profile-bio, .profile-details, .profile-intro {
+  margin: 4px 0 16px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: var(--text);
+}
+.profile-details p { margin: 0 0 10px; }
+.profile-intro {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 12px;
+  white-space: pre-wrap;
+}
+.empty { color: var(--text-muted); font-size: 13px; }
+
+.rec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
   margin-bottom: 8px;
   cursor: pointer;
+  transition: border-color 0.15s;
 }
 .rec-card:hover { border-color: var(--accent); }
-.rec-name { font-weight: 600; }
-.rec-reason { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+.rec-name { font-weight: 600; display: flex; justify-content: space-between; gap: 8px; }
+.rec-score { color: var(--accent); font-size: 13px; font-weight: 600; }
+.rec-reason { color: var(--text-muted); font-size: 13px; margin-top: 4px; line-height: 1.45; }
+
+.connections-list { display: flex; flex-direction: column; gap: 6px; }
+.conn-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.conn-card:hover { border-color: var(--accent); }
+.conn-row { display: flex; align-items: center; gap: 10px; }
+.conn-avatar { width: 32px; height: 32px; font-size: 13px; }
+.conn-name { font-weight: 600; font-size: 14px; }
+.conn-type { color: var(--text-muted); font-size: 11px; }
+.conn-reason { color: var(--text-muted); font-size: 12px; margin-top: 6px; line-height: 1.4; }
