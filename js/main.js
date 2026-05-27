@@ -21,7 +21,7 @@ async function main() {
     openSidebar(node, data, selfId);
   });
 
-  initSearch(graph, data);
+  initSearch(graph, data, selfId);
   initFilters(graph, data, selfId);
 
   document.getElementById('sidebar-close').addEventListener('click', closeSidebar);

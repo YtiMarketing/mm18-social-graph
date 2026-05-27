@@ -103,8 +103,10 @@ export function createGraph(container, data, selfId, onNodeClick) {
       }
     });
 
-  graph.d3Force('charge').strength(-120);
-  graph.d3Force('link').distance(80).strength(0.3);
+  graph.d3Force('charge').strength(-400).distanceMax(800);
+  graph.d3Force('link')
+    .distance(l => l.type === 'strong' ? 70 : (l.type === 'medium' ? 130 : 260))
+    .strength(l => l.type === 'strong' ? 0.5 : (l.type === 'medium' ? 0.2 : 0.02));
 
   return {
     instance: graph,

@@ -8,7 +8,9 @@ export function initFilters(graphCtl, data, selfId) {
     const fg = graphCtl.instance;
     if (activeFilter === 'all') {
       fg.nodeVisibility(() => true);
-      fg.linkVisibility(() => true);
+      // По умолчанию прячем weak — их слишком много (любой общий тег = связь),
+      // граф становится сплошным комом. Strong и medium дают осмысленную картину.
+      fg.linkVisibility(l => l.type !== 'weak');
       return;
     }
     if (activeFilter === 'mine') {
