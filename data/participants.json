@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T20:31:06.561Z",
+  "generated_at": "2026-05-27T20:31:47.614Z",
   "nodes": [
     {
       "id": "artur_shamalov",
@@ -25,6 +25,32 @@
       ],
       "bio": "Серийный предприниматель с 14 лет, привлёк ~$70M инвестиций. Продавал компании Mail.ru, Сберу, X5. Сооснователь Jiffy (доставка продуктов в Лондоне). Ведёт мастермайнд для предпринимателей, менторит стартапы.",
       "avatar_initials": "AS"
+    },
+    {
+      "id": "Acora",
+      "name": "Анна Бондаренко",
+      "telegram": "Acora",
+      "role": "mentor",
+      "city": "",
+      "role_text": "служба заботы ММ",
+      "tags": [
+        "консалтинг",
+        "тайм-менеджмент",
+        "инвест",
+        "digital",
+        "агентство",
+        "продуктивность"
+      ],
+      "request": [
+        "клиент"
+      ],
+      "offer": [
+        "ментор",
+        "консалтинг",
+        "обмен опытом"
+      ],
+      "bio": "8 лет владела digital-агентством, собрала инвест-команду с оборотом 45+ млн ₽/мес. Помогает предпринимателям с тайм-менеджментом: фокус, приоритеты, дисциплина исполнения. Служба заботы MM18.",
+      "avatar_initials": "АБ"
     },
     {
       "id": "rybioshka",
@@ -1851,6 +1877,12 @@
   "links": [
     {
       "source": "artur_shamalov",
+      "target": "Acora",
+      "type": "strong",
+      "reason": "Artur Shamalov ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "artur_shamalov",
       "target": "rybioshka",
       "type": "strong",
       "reason": "Artur Shamalov ищет: обмен опытом — у Katerina это есть"
@@ -2310,6 +2342,384 @@
       "target": "tg:388221696",
       "type": "medium",
       "reason": "Один город: Москва"
+    },
+    {
+      "source": "Acora",
+      "target": "rybioshka",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "Acora",
+      "target": "Roman_Shayakhmetov",
+      "type": "strong",
+      "reason": "Roman ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "geovector14",
+      "type": "medium",
+      "reason": "Общие темы: консалтинг, инвест"
+    },
+    {
+      "source": "Acora",
+      "target": "Iren_Sergee_va",
+      "type": "strong",
+      "reason": "Irina Sergeeva ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "danilov9999",
+      "type": "strong",
+      "reason": "Данилов Алексей ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "DGulya1",
+      "type": "strong",
+      "reason": "Gulnara ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Pavel_MPV77",
+      "type": "strong",
+      "reason": "Павел Мыльников ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "sem_and",
+      "type": "strong",
+      "reason": "Андрей Сёмочкин ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Abubekerff",
+      "type": "strong",
+      "reason": "Абубекер Мурзагельдиев ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Ravdugina_Oksana",
+      "type": "strong",
+      "reason": "Оксана Равдугина ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Almaz_sagdiev",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "Acora",
+      "target": "Nikolai_Kireev",
+      "type": "strong",
+      "reason": "Nikolai Строитель Kireev ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "vyacheslavkuznetcov",
+      "type": "strong",
+      "reason": "Анна Бондаренко ищет: клиент — у Vyacheslav Kuznetsov Kuznetsov это есть · Vyacheslav Kuznetsov Kuznetsov ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "BeganskiyStanislav",
+      "type": "strong",
+      "reason": "Stanislav ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Mconsalting",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "Acora",
+      "target": "AnnaMatytsina",
+      "type": "strong",
+      "reason": "Анна Матыцина ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "egor_sof",
+      "type": "weak",
+      "reason": "Общий тег: инвест"
+    },
+    {
+      "source": "Acora",
+      "target": "aa_dayds",
+      "type": "strong",
+      "reason": "Анна ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "tata_fea",
+      "type": "strong",
+      "reason": "Анна Бондаренко ищет: клиент — у Татьяна Горчакова Горчакова это есть · Татьяна Горчакова Горчакова ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "dina_skr",
+      "type": "strong",
+      "reason": "Анна Бондаренко ищет: клиент — у Dina это есть · Dina ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "tretiakovna",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "Acora",
+      "target": "belonogov_b",
+      "type": "strong",
+      "reason": "Bogdan Belonogov ищет: ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "zvereva_natali",
+      "type": "strong",
+      "reason": "Наталья Зверева ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "loguar_amir",
+      "type": "strong",
+      "reason": "Амир⚖️ ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "dinsmv",
+      "type": "strong",
+      "reason": "Мадина Насимова ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "mitrofanlem",
+      "type": "strong",
+      "reason": "Дмитрий А ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "DMTRGRN",
+      "type": "strong",
+      "reason": "Дмитрий Николаевич Николаевич ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "mr_sevast",
+      "type": "strong",
+      "reason": "Michael Sеvast ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "dmitry_savinov",
+      "type": "weak",
+      "reason": "Общий тег: агентство"
+    },
+    {
+      "source": "Acora",
+      "target": "Stepanov_Yti",
+      "type": "strong",
+      "reason": "Александр Степанов ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "feelmyimba13",
+      "type": "strong",
+      "reason": "Vladislav B ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "yaroslavmuratov",
+      "type": "strong",
+      "reason": "Ярослав Муратов ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "zema15",
+      "type": "strong",
+      "reason": "Denis ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "yuralitvinko",
+      "type": "strong",
+      "reason": "Yura Litvinko ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "nastenka_trukhanova",
+      "type": "strong",
+      "reason": "Анастасия Труханова ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "nikolay_zlat",
+      "type": "strong",
+      "reason": "Анна Бондаренко ищет: клиент — у Николай Голубев это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Kem_Olga",
+      "type": "strong",
+      "reason": "Ольга Кемрина Кемрина ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "igorexator",
+      "type": "weak",
+      "reason": "Общий тег: инвест"
+    },
+    {
+      "source": "Acora",
+      "target": "kostara",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "Acora",
+      "target": "yurimilutka",
+      "type": "strong",
+      "reason": "Milutka Yuri ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "ErmolovSTR",
+      "type": "strong",
+      "reason": "Александр Ермолов ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "gberg1",
+      "type": "weak",
+      "reason": "Общий тег: инвест"
+    },
+    {
+      "source": "Acora",
+      "target": "MikhailStep",
+      "type": "strong",
+      "reason": "Михаил Степанов ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "G_geo",
+      "type": "strong",
+      "reason": "Кирилл Гильдия Геодезистов Гильдия Геодезистов ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "ShamanicMedicine",
+      "type": "strong",
+      "reason": "Михаил ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "Almazz111",
+      "type": "strong",
+      "reason": "Алмаз Андреев Андреев ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "brazzil23",
+      "type": "strong",
+      "reason": "Зинур ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "denis_lysenko",
+      "type": "strong",
+      "reason": "Denis Lysenko ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "iserat",
+      "type": "strong",
+      "reason": "Sergei Yaroshenko ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "AMaksimchenkov",
+      "type": "strong",
+      "reason": "Алексей Максимченков ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "nzapasnikov",
+      "type": "strong",
+      "reason": "Nikita Zapasnikov ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "xlevinx",
+      "type": "weak",
+      "reason": "Общий тег: инвест"
+    },
+    {
+      "source": "Acora",
+      "target": "VadimGlukhov",
+      "type": "strong",
+      "reason": "Анна Бондаренко ищет: клиент — у Вадим Глухов это есть · Вадим Глухов ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "rameevandrey",
+      "type": "strong",
+      "reason": "Андрей Рамеев ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "OKOKOK18",
+      "type": "strong",
+      "reason": "O K ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "KatkovAlexey",
+      "type": "weak",
+      "reason": "Общий тег: консалтинг"
+    },
+    {
+      "source": "Acora",
+      "target": "vorogushin",
+      "type": "strong",
+      "reason": "Ivan Vorogushin ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "secretnikita",
+      "type": "strong",
+      "reason": "@NikitaSecret Трейдинг в сердце ❤️ ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "gerolaytis",
+      "type": "strong",
+      "reason": "Анна Бондаренко ищет: клиент — у Igor Gerolaytis это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "artembiz",
+      "type": "strong",
+      "reason": "Артем Орлов Орлов ищет: ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "av_yanovskaya",
+      "type": "strong",
+      "reason": "Анастасия Яновская ищет: обмен опытом, ментор — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "tg:446458305",
+      "type": "strong",
+      "reason": "Илья ищет: обмен опытом — у Анна Бондаренко это есть"
+    },
+    {
+      "source": "Acora",
+      "target": "tg:1563443431",
+      "type": "strong",
+      "reason": "Михаил Семененко ищет: обмен опытом — у Анна Бондаренко это есть"
     },
     {
       "source": "rybioshka",
