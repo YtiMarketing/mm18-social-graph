@@ -18,6 +18,37 @@ const LINK_STYLE = {
   weak:   { color: 'rgba(220,220,255,0.10)', width: 0.7, dash: [4, 8] },
 };
 
+// Простая collision force без зависимости от глобального d3 (force-graph
+// бандлит d3 внутрь). За один тик отталкиваем пары нод которые ближе чем
+// сумма их радиусов. O(n^2) — для 80 нод это 3200 пар, нормально.
+function makeCollideForce(radiusFn) {
+  let nodes;
+  function force(alpha) {
+    const n = nodes.length;
+    for (let i = 0; i < n; i++) {
+      const a = nodes[i];
+      const ra = radiusFn(a);
+      for (let j = i + 1; j < n; j++) {
+        const b = nodes[j];
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const distSq = dx * dx + dy * dy;
+        const minDist = ra + radiusFn(b);
+        if (distSq < minDist * minDist && distSq > 0) {
+          const dist = Math.sqrt(distSq);
+          const push = (minDist - dist) / dist * 0.5 * alpha;
+          const pdx = dx * push;
+          const pdy = dy * push;
+          a.x -= pdx; a.y -= pdy;
+          b.x += pdx; b.y += pdy;
+        }
+      }
+    }
+  }
+  force.initialize = (n) => { nodes = n; };
+  return force;
+}
+
 export function createGraph(container, data, selfId, onNodeClick) {
   // Помечаем self
   for (const n of data.nodes) {
@@ -70,8 +101,8 @@ export function createGraph(container, data, selfId, onNodeClick) {
 
       ctx.globalAlpha = dimmed ? 0.12 : 1;
 
-      // Внешний halo — большой мягкий радиальный градиент (свечение в космосе)
-      const haloR = r * (node.isSelf ? 4.5 : 3.2);
+      // Внешний halo — мягкое свечение, но небольшое чтобы ноды не сливались
+      const haloR = r * (node.isSelf ? 2.6 : 1.9);
       const halo = ctx.createRadialGradient(node.x, node.y, r * 0.6, node.x, node.y, haloR);
       halo.addColorStop(0, glow);
       halo.addColorStop(1, 'rgba(0,0,0,0)');
@@ -101,12 +132,10 @@ export function createGraph(container, data, selfId, onNodeClick) {
       ctx.textBaseline = 'middle';
       ctx.fillText(node.avatar_initials || '??', node.x, node.y);
 
-      // Подпись имени под узлом (только при достаточном zoom)
-      if (scale > 1.0) {
-        ctx.fillStyle = 'rgba(232,232,238,0.85)';
-        ctx.font = '10px sans-serif';
-        ctx.fillText(node.name.split(' ')[0], node.x, node.y + r + 10);
-      }
+      // Подпись имени под узлом — всегда видна (как в MM17 reference)
+      ctx.fillStyle = 'rgba(232,232,238,0.85)';
+      ctx.font = `${Math.max(9, 10 / Math.max(scale, 0.6))}px sans-serif`;
+      ctx.fillText(node.name.split(' ')[0], node.x, node.y + r + 11);
       ctx.globalAlpha = 1;
     })
     .linkCanvasObject((link, ctx) => {
@@ -149,19 +178,19 @@ export function createGraph(container, data, selfId, onNodeClick) {
       }
     });
 
-  // Силы должны быть сконфигурированы ДО graphData(), иначе симуляция
-  // успевает прогнать несколько тиков с дефолтными настройками. С -450 charge
-  // и 2756 линками это давало NaN-координаты → createRadialGradient падал.
-  graph.warmupTicks(80);
-  graph.d3VelocityDecay(0.5);
+  // Силы конфигурируются после graphData(). Pre-init позиций (выше) защищает
+  // от NaN-каскада, который раньше срывал рендер при сильном charge.
+  graph.warmupTicks(120);
+  graph.d3VelocityDecay(0.45);
   graph.graphData(data);
 
-  graph.d3Force('charge').strength(-180).distanceMax(600);
+  graph.d3Force('charge').strength(-360).distanceMax(900);
   graph.d3Force('link')
-    .distance(l => l.type === 'strong' ? 90 : (l.type === 'medium' ? 170 : 320))
-    .strength(l => l.type === 'strong' ? 0.35 : (l.type === 'medium' ? 0.12 : 0.01));
+    .distance(l => l.type === 'strong' ? 110 : (l.type === 'medium' ? 220 : 420))
+    .strength(l => l.type === 'strong' ? 0.45 : (l.type === 'medium' ? 0.10 : 0.005));
+  graph.d3Force('collide', makeCollideForce(n => Math.sqrt(n.val) * 4 * 2.3 + 10));
 
-  setTimeout(() => graph.zoomToFit(800, 100), 600);
+  setTimeout(() => graph.zoomToFit(800, 120), 700);
 
   return {
     instance: graph,

@@ -11,7 +11,7 @@ async function main() {
   const dataRes = await fetch('./data/participants.json');
   const data = await dataRes.json();
 
-  const { selfId: query } = await initSplash();
+  const { selfId: query } = await initSplash(data.nodes);
   const selfNode = resolveSelf(data.nodes, query);
   const selfId = selfNode?.id || null;
 

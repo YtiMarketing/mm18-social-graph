@@ -96,6 +96,28 @@ html, body {
   color: var(--text-muted);
   border: none;
 }
+.splash-suggest {
+  background: rgba(20, 18, 35, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: -8px 0 12px;
+  max-height: 240px;
+  overflow-y: auto;
+  text-align: left;
+}
+.splash-suggest .suggest-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(120, 110, 180, 0.1);
+  transition: background 0.12s;
+}
+.splash-suggest .suggest-item:last-child { border-bottom: none; }
+.splash-suggest .suggest-item:hover { background: rgba(255, 107, 0, 0.15); }
+.splash-suggest .suggest-name { color: var(--text); font-size: 14px; }
+.splash-suggest .suggest-tg { color: var(--accent); font-size: 13px; }
 
 /* Header */
 header {
