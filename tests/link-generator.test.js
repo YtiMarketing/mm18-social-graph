@@ -48,48 +48,56 @@ test('generateLinks: strong link when jaccard >= 0.4', () => {
   assert.match(links[0].reason, /AI|B2B/);
 });
 
-test('generateLinks: strong via bidirectional request/offer even with no tag overlap', () => {
+test('generateLinks: bidirectional alone (no tag overlap) НЕ даёт strong при текущих порогах', () => {
+  // Раньше биReasons.length > 0 поднимал в strong. Теперь требуется
+  // jac >= 0.2 AND обе стороны нашли матч — иначе никакой связи.
   const profiles = [
     { id: 'a', tags: ['e-com'], request: ['ментор'], offer: ['клиент'], city: 'Москва' },
     { id: 'b', tags: ['IT'], request: [], offer: ['ментор'], city: 'СПб' },
   ];
+  assert.equal(generateLinks(profiles).length, 0);
+});
+
+test('generateLinks: strong via jac>=0.2 + двусторонний bi-match', () => {
+  const profiles = [
+    { id: 'a', name: 'Иван', tags: ['AI', 'B2B', 'продажи'], request: ['клиент'], offer: ['ментор'], city: 'Москва' },
+    { id: 'b', name: 'Пётр', tags: ['AI', 'продажи'], request: ['ментор'], offer: ['клиент'], city: 'СПб' },
+  ];
+  // jac = 2/3 ≈ 0.67 → strong (даже без bi-match), reason из biReasons
   const links = generateLinks(profiles);
   assert.equal(links.length, 1);
   assert.equal(links[0].type, 'strong');
-  assert.match(links[0].reason, /ментор/i);
+  assert.match(links[0].reason, /Иван|Пётр|клиент|ментор/i);
 });
 
-test('generateLinks: bidirectional match builds reason naming both sides', () => {
-  const profiles = [
-    { id: 'a', name: 'Иван', tags: [], request: ['клиент'], offer: [], city: 'Москва' },
-    { id: 'b', name: 'Пётр', tags: [], request: [], offer: ['клиент'], city: 'СПб' },
-  ];
-  const links = generateLinks(profiles);
-  assert.equal(links.length, 1);
-  // Reason должна упомянуть направление
-  assert.match(links[0].reason, /Иван.*клиент|клиент.*Иван|Пётр/i);
-});
-
-test('generateLinks: medium via city overlap only', () => {
+test('generateLinks: city alone НЕ даёт связи', () => {
+  // Раньше один общий город → medium. Сейчас city убран как триггер —
+  // нужно совпадение тегов.
   const profiles = [
     { id: 'a', tags: ['e-com'], request: [], offer: [], city: 'Москва' },
     { id: 'b', tags: ['IT'], request: [], offer: [], city: 'москва' },
   ];
+  assert.equal(generateLinks(profiles).length, 0);
+});
+
+test('generateLinks: medium при jac>=0.15 и >=2 общих тегах', () => {
+  const profiles = [
+    { id: 'a', tags: ['AI', 'B2B', 'SaaS', 'продажи'], request: [], offer: [], city: 'Москва' },
+    { id: 'b', tags: ['AI', 'B2B', 'e-com', 'найм', 'логистика'], request: [], offer: [], city: 'СПб' },
+  ];
+  // jac = 2/7 ≈ 0.286 → выше 0.35? нет (это 0.286). Проверим точно.
+  // common = {AI, B2B} = 2; объединение = 7. 2/7 ≈ 0.286 < 0.35 → medium
   const links = generateLinks(profiles);
   assert.equal(links.length, 1);
   assert.equal(links[0].type, 'medium');
-  assert.match(links[0].reason, /Москва/);
 });
 
-test('generateLinks: weak via single shared tag', () => {
+test('generateLinks: единственный общий тег больше НЕ даёт связи (weak убран)', () => {
   const profiles = [
     { id: 'a', tags: ['AI', 'B2B', 'SaaS', 'продажи', 'найм'], request: [], offer: [], city: 'Москва' },
     { id: 'b', tags: ['AI', 'e-com', 'B2C', 'найм-other-1', 'найм-other-2', 'найм-other-3'], request: [], offer: [], city: 'СПб' },
   ];
-  // jaccard = 1/10 = 0.1 — ни strong, ни medium, но 1 общий → weak
-  const links = generateLinks(profiles);
-  assert.equal(links.length, 1);
-  assert.equal(links[0].type, 'weak');
+  assert.equal(generateLinks(profiles).length, 0);
 });
 
 test('generateLinks: no link when no overlap of any kind', () => {

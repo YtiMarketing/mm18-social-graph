@@ -43,25 +43,25 @@ export function generateLinks(profiles) {
       const commonTags = (a.tags || []).filter(t => setB.has(String(t).trim().toLowerCase()));
       const biReasons = bidirectionalMatch(a, b);
 
+      // Жёсткие пороги — в чате ~80 человек, с прежними правилами получалось
+      // 2820 связей (avg 36 на ноду). Это превращает граф в плотный клубок,
+      // которому никакой force-tune не помогает. В MM17-референсе avg ~15.
+      // Цель: ≤20 связей на ноду в среднем.
+      const bothBi = biReasons.length >= 2; // обе стороны нашли в другой нужный матч
       let type = null;
       let reason = '';
 
-      if (jac >= 0.4 || biReasons.length > 0) {
+      if (jac >= 0.35 || (jac >= 0.2 && bothBi)) {
         type = 'strong';
         reason = biReasons.length > 0
           ? biReasons.join(' · ')
           : `Общие темы: ${commonTags.slice(0, 3).join(', ')}`;
-      } else if (jac >= 0.2 || (a.city && b.city && a.city.trim().toLowerCase() === b.city.trim().toLowerCase())) {
+      } else if (jac >= 0.15 && commonTags.length >= 2) {
         type = 'medium';
-        if (jac >= 0.2) {
-          reason = `Общие темы: ${commonTags.slice(0, 3).join(', ')}`;
-        } else {
-          reason = `Один город: ${a.city}`;
-        }
-      } else if (commonTags.length >= 1) {
-        type = 'weak';
-        reason = `Общий тег: ${commonTags[0]}`;
+        reason = `Общие темы: ${commonTags.slice(0, 3).join(', ')}`;
       }
+      // Weak-связи (только commonTags >= 1) убраны — слишком много шумовых
+      // линков, force-симуляция разваливалась в клубок.
 
       if (type) {
         links.push({ source: a.id, target: b.id, type, reason });

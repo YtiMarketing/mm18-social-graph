@@ -184,13 +184,13 @@ export function createGraph(container, data, selfId, onNodeClick) {
   graph.d3VelocityDecay(0.45);
   graph.graphData(data);
 
-  graph.d3Force('charge').strength(-360).distanceMax(900);
+  graph.d3Force('charge').strength(-600).distanceMax(1400);
   graph.d3Force('link')
-    .distance(l => l.type === 'strong' ? 110 : (l.type === 'medium' ? 220 : 420))
-    .strength(l => l.type === 'strong' ? 0.45 : (l.type === 'medium' ? 0.10 : 0.005));
-  graph.d3Force('collide', makeCollideForce(n => Math.sqrt(n.val) * 4 * 2.3 + 10));
+    .distance(l => l.type === 'strong' ? 140 : 280)
+    .strength(l => l.type === 'strong' ? 0.25 : 0.06);
+  graph.d3Force('collide', makeCollideForce(n => Math.sqrt(n.val) * 4 * 3.0 + 14));
 
-  setTimeout(() => graph.zoomToFit(800, 120), 700);
+  setTimeout(() => graph.zoomToFit(800, 140), 900);
 
   return {
     instance: graph,
