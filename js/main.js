@@ -1,4 +1,4 @@
-import { initSplash, resolveSelf } from './splash.js';
+import { initSplash, resolveSelf, setStoredSelfId } from './splash.js';
 import { createGraph } from './graph.js';
 import { openSidebar, closeSidebar } from './sidebar.js';
 import { initSearch } from './search.js';
@@ -40,6 +40,14 @@ async function main() {
     closeSidebar();
     graph.clearHighlight();
     filters.resetToAll();
+  });
+
+  // Кнопка «сменить я» — видна только если selfId сохранён
+  const switchBtn = document.getElementById('switch-self-btn');
+  if (selfId) switchBtn.classList.remove('hidden');
+  switchBtn.addEventListener('click', () => {
+    setStoredSelfId(null);
+    location.reload();
   });
 
   if (selfNode) {

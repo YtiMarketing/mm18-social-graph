@@ -1,6 +1,18 @@
 // Splash с автокомплитом по participants.json.
 // При вводе показываем выпадающий список совпадений по name/username/role_text.
 // На выбор пользователя → finish(selectedId). Можно ввести вручную и нажать Enter.
+const STORAGE_KEY = 'mm18-self-id';
+
+export function getStoredSelfId() {
+  try { return localStorage.getItem(STORAGE_KEY); } catch { return null; }
+}
+export function setStoredSelfId(id) {
+  try {
+    if (id) localStorage.setItem(STORAGE_KEY, id);
+    else localStorage.removeItem(STORAGE_KEY);
+  } catch { /* приватный режим / нет storage — игнорим */ }
+}
+
 export function initSplash(nodes = []) {
   return new Promise(resolve => {
     const splash = document.getElementById('splash');
@@ -9,7 +21,21 @@ export function initSplash(nodes = []) {
     const skipBtn = document.getElementById('splash-skip');
     const suggestBox = document.getElementById('splash-suggest');
 
+    // Если selfId уже сохранён и соответствующая нода есть — пропускаем splash
+    const stored = getStoredSelfId();
+    if (stored && nodes.some(n => n.id === stored)) {
+      requestAnimationFrame(() => {
+        splash.classList.add('hidden');
+        document.getElementById('header').classList.remove('hidden');
+        document.getElementById('graph').classList.remove('hidden');
+        document.getElementById('legend').classList.remove('hidden');
+        resolve({ selfId: stored });
+      });
+      return;
+    }
+
     const finish = (selfId) => {
+      setStoredSelfId(selfId);
       splash.classList.add('hidden');
       document.getElementById('header').classList.remove('hidden');
       document.getElementById('graph').classList.remove('hidden');
@@ -45,7 +71,10 @@ export function initSplash(nodes = []) {
 
     enterBtn.addEventListener('click', () => {
       const raw = input.value.trim().replace(/^@/, '');
-      finish(raw || null);
+      // Резолвим в реальный node.id (case-preserved) — без этого localStorage
+      // сохранит то что юзер набрал и на следующем заходе не сматчит.
+      const resolved = resolveSelf(nodes, raw);
+      finish(resolved?.id || null);
     });
     input.addEventListener('keydown', e => {
       if (e.key === 'Enter') enterBtn.click();

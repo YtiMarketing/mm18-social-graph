@@ -488,3 +488,60 @@ main#graph canvas { background: transparent !important; }
   font-size: 11px;
   display: block;
 }
+
+.filter-btn.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 4px 10px;
+}
+.filter-btn.ghost:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ===== Mobile (≤ 720px) ===== */
+@media (max-width: 720px) {
+  header {
+    height: 52px;
+    padding: 0 10px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  header::-webkit-scrollbar { display: none; }
+  .header-left { display: none; }
+  .header-center { max-width: 160px; flex-shrink: 0; }
+  .header-center input { padding: 6px 10px; font-size: 13px; }
+  .header-right { gap: 6px; }
+  .filter-btn { padding: 4px 10px; font-size: 13px; white-space: nowrap; }
+  .counter { display: none; }
+
+  main#graph { top: 52px; }
+
+  #legend { display: none; }
+
+  .sidebar {
+    top: 52px;
+    width: 100vw;
+    left: 0; right: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .splash-card {
+    padding: 28px 20px;
+    max-width: 92vw;
+  }
+  .splash-card h1 { font-size: 28px; }
+  .splash-card .splash-tag { margin-bottom: 20px; }
+
+  .profile-name { font-size: 18px; }
+  .rating-row, .person-row, .conn-card, .rec-card { padding: 8px; }
+}
+
+/* ===== Очень узкие телефоны (≤ 380px) ===== */
+@media (max-width: 380px) {
+  .filter-btn { padding: 4px 8px; font-size: 12px; }
+  .header-center { max-width: 110px; }
+  .header-center input { font-size: 12px; }
+}
