@@ -81,7 +81,7 @@ export function buildGraphData(profiles) {
   const visible = (profiles || []).filter(p => p.role !== 'care' && p.role !== 'tech');
 
   const nodes = visible.map(p => ({
-    id: p.tg_username,
+    id: p.tg_username || `tg:${p.user_id}`,
     name: `${p.first_name || ''} ${p.last_name || ''}`.trim(),
     telegram: p.tg_username,
     role: p.role || 'participant',
