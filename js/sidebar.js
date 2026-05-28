@@ -42,10 +42,14 @@ export function openSidebar(node, data, selfId) {
 
   const recs = topRecommendations(node, data, 5);
 
+  // ИНТРО показывает приветственное сообщение из чата — это самый ценный
+  // контент для понимания «чем человек может быть полезен». Берём
+  // intro_message (AI-извлечённое полное представление) или raw_intro (fallback).
+  const hasIntro = !!(node.intro_message || node.raw_intro);
   const tabs = [
     { id: 'overview',  label: 'ОБЗОР' },
     { id: 'details',   label: 'ПОДРОБНЕЕ' },
-    { id: 'intro',     label: 'ИНТРО', shown: !!node.raw_intro },
+    { id: 'intro',     label: 'ИНТРО', shown: hasIntro },
     { id: 'connections', label: 'СВЯЗИ', count: connections.length },
   ].filter(t => t.shown !== false);
 
