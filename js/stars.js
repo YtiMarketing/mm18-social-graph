@@ -8,6 +8,11 @@ const NEBULA_COUNT = 4;
 export function initStars() {
   const canvas = document.getElementById('stars');
   if (!canvas) return;
+
+  // Respect user preference: пользователи с motion sensitivity получают
+  // статичный фон без мерцания и падающих звёзд.
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const ctx = canvas.getContext('2d');
 
   // Сцена пересчитывается при resize, но звёзды/туманности сохраняются.
@@ -91,7 +96,8 @@ export function initStars() {
     // Звёзды
     const time = t * 0.001;
     for (const s of stars) {
-      const tw = 0.5 + 0.5 * Math.sin(time * s.twinkleSpeed + s.twinklePhase);
+      // reduce-motion: статичная альфа без мерцания
+      const tw = reduceMotion ? 1 : (0.5 + 0.5 * Math.sin(time * s.twinkleSpeed + s.twinklePhase));
       const alpha = s.baseAlpha * (0.6 + 0.4 * tw);
       ctx.fillStyle = s.hue
         ? hexToRgba(s.hue, alpha)
@@ -108,8 +114,8 @@ export function initStars() {
       }
     }
 
-    // Падающие звёзды
-    if (Math.random() < 0.003 && shootingStars.length < 2) spawnShooting();
+    // Падающие звёзды — отключаем при prefers-reduced-motion
+    if (!reduceMotion && Math.random() < 0.003 && shootingStars.length < 2) spawnShooting();
     for (let i = shootingStars.length - 1; i >= 0; i--) {
       const sh = shootingStars[i];
       sh.x += sh.vx;

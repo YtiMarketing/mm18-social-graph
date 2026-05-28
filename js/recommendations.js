@@ -75,7 +75,16 @@ function pairScore(a, b, data) {
   if (b.role === 'organizer') rolePts = 0.8;
   else if (b.role === 'mentor') rolePts = 0.5;
 
-  const total = biPts + tagPts + cityPts + rolePts;
+  // Активность в чате — тёплый сигнал: человек живой, отвечает.
+  // Лёгкий буст за активность, штраф за полное молчание (вероятно, не дойдёт).
+  // message_count: 0 → -0.5, 1-5 → 0, 6-20 → +0.3, >20 → +0.6
+  let activityPts = 0;
+  const mc = b.message_count || 0;
+  if (mc === 0) activityPts = -0.5;
+  else if (mc > 20) activityPts = 0.6;
+  else if (mc > 5) activityPts = 0.3;
+
+  const total = biPts + tagPts + cityPts + rolePts + activityPts;
   // 1..10 шкала, минимум 1 (чтобы 0.x не превращалось в 0)
   const score = Math.max(1, Math.min(10, Math.round(total)));
 

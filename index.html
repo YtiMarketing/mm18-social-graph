@@ -25,13 +25,14 @@
 </head>
 <body>
   <!-- Splash -->
-  <div id="splash" class="splash">
+  <div id="splash" class="splash" role="dialog" aria-modal="true" aria-labelledby="splash-title">
     <div class="splash-card">
       <div class="splash-tag">MM18</div>
-      <h1>Социальные <span class="accent">связи</span> чата<br>MM18</h1>
+      <h1 id="splash-title">Социальные <span class="accent">связи</span> чата<br>MM18</h1>
       <p>Введи имя или @username, чтобы сразу открыть свои связи.</p>
+      <label for="splash-input" class="visually-hidden">Твоё имя или @username</label>
       <input id="splash-input" type="text" placeholder="Имя или @username" autocomplete="off">
-      <div id="splash-suggest" class="splash-suggest hidden"></div>
+      <div id="splash-suggest" class="splash-suggest hidden" role="listbox" aria-label="Похожие участники"></div>
       <button id="splash-enter">Войти</button>
       <button id="splash-skip" class="link">Пропустить</button>
     </div>
@@ -44,39 +45,41 @@
       <span class="muted">чата MM18</span>
     </div>
     <div class="header-center">
-      <input id="search" type="text" placeholder="Имя или @telegram…" autocomplete="off">
-      <div id="search-suggest" class="search-suggest hidden"></div>
+      <label for="search" class="visually-hidden">Поиск участников</label>
+      <input id="search" type="text" placeholder="Имя или @telegram…" autocomplete="off" aria-controls="search-suggest">
+      <div id="search-suggest" class="search-suggest hidden" role="listbox" aria-label="Результаты поиска"></div>
     </div>
-    <div class="header-right">
-      <button class="filter-btn active" data-filter="all">Все связи</button>
-      <button class="filter-btn" data-filter="mine">Мои связи</button>
-      <button class="filter-btn" id="categories-btn">Категории</button>
-      <button class="filter-btn" id="rating-btn">Рейтинг</button>
-      <button class="filter-btn ghost hidden" id="switch-self-btn" title="Войти как другой">⇄</button>
+    <div class="header-right" role="toolbar" aria-label="Фильтры и инструменты">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">Все связи</button>
+      <button class="filter-btn" data-filter="mine" aria-pressed="false">Мои связи</button>
+      <button class="filter-btn" id="city-btn" aria-haspopup="dialog">Город</button>
+      <button class="filter-btn" id="categories-btn" aria-haspopup="dialog">Категории</button>
+      <button class="filter-btn" id="rating-btn" aria-haspopup="dialog">Рейтинг</button>
+      <button class="filter-btn ghost hidden" id="switch-self-btn" title="Сменить «Я»" aria-label="Сменить «Я» — войти как другой участник">⇄</button>
       <span class="counter" id="counter-participants">— участников</span>
       <span class="counter" id="counter-links">— связей</span>
     </div>
   </header>
 
   <!-- Cosmic background canvas (звёзды + туманности) -->
-  <canvas id="stars"></canvas>
+  <canvas id="stars" aria-hidden="true"></canvas>
 
   <!-- Graph canvas -->
-  <main id="graph" class="hidden"></main>
+  <main id="graph" class="hidden" role="img" aria-label="Граф социальных связей участников MM18"></main>
 
   <!-- Legend -->
-  <aside id="legend" class="hidden">
-    <span class="legend-dot" style="background:#a155b9"></span> Организатор
-    <span class="legend-dot" style="background:#00c853"></span> Ментор
-    <span class="legend-dot" style="background:#4a90d9"></span> Участник
-    <span class="legend-dot" style="background:#ff6b00"></span> Ты
+  <aside id="legend" class="hidden" aria-label="Легенда: цвета ролей">
+    <span class="legend-dot" style="background:#a155b9" aria-hidden="true"></span> Организатор
+    <span class="legend-dot" style="background:#00c853" aria-hidden="true"></span> Ментор
+    <span class="legend-dot" style="background:#4a90d9" aria-hidden="true"></span> Участник
+    <span class="legend-dot" style="background:#ff6b00" aria-hidden="true"></span> Ты
   </aside>
 
   <!-- Sidebar -->
-  <aside id="sidebar" class="sidebar hidden">
+  <aside id="sidebar" class="sidebar hidden" aria-label="Панель деталей">
     <div class="sidebar-header">
       <span>ПРОФИЛЬ</span>
-      <button id="sidebar-close">×</button>
+      <button id="sidebar-close" aria-label="Закрыть панель">×</button>
     </div>
     <div id="sidebar-body"></div>
   </aside>

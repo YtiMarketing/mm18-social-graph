@@ -3,7 +3,10 @@ import { openSidebar } from './sidebar.js';
 // Поиск в шапке с autocomplete-дропдауном (как на splash-странице).
 // Подсветка по графу остаётся: набрал q → подсвечены все совпадения.
 // Выбор из списка (клик / Enter на активном пункте) → центруем камеру + sidebar.
-export function initSearch(graphCtl, data, selfId) {
+// openProfileFn — необязательный callback (main.js пробрасывает свою обёртку,
+// которая ещё пишет URL-state). Если не передан — используем openSidebar напрямую.
+export function initSearch(graphCtl, data, selfId, openProfileFn) {
+  const openProfile = openProfileFn || ((node) => openSidebar(node, data, selfId));
   const input = document.getElementById('search');
   const suggestBox = document.getElementById('search-suggest');
 
@@ -94,7 +97,7 @@ export function initSearch(graphCtl, data, selfId) {
         graphCtl.instance.centerAt(node.x, node.y, 800);
         graphCtl.instance.zoom(2.5, 800);
       }
-      openSidebar(node, data, selfId);
+      openProfile(node);
     };
     if (node.x == null) setTimeout(focus, 200);
     else focus();

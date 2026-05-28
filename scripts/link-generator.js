@@ -80,22 +80,29 @@ function initials(firstName, lastName) {
 export function buildGraphData(profiles) {
   const visible = (profiles || []).filter(p => p.role !== 'care' && p.role !== 'tech');
 
-  const nodes = visible.map(p => ({
-    id: p.tg_username || `tg:${p.user_id}`,
-    name: `${p.first_name || ''} ${p.last_name || ''}`.trim(),
-    telegram: p.tg_username,
-    role: p.role || 'participant',
-    city: p.city || '',
-    role_text: p.role_text || '',
-    tags: p.tags || [],
-    request: p.request || [],
-    offer: p.offer || [],
-    bio: p.bio || '',
-    raw_intro: p.raw_intro || '',
-    intro_message: p.intro_message || '',
-    message_count: p.message_count || 0,
-    avatar_initials: initials(p.first_name, p.last_name),
-  }));
+  const nodes = visible.map(p => {
+    // raw_intro — это сырой склейка сообщений из чата, обычно дубликат
+    // intro_message + мусор. Кладём в публичный JSON только если AI-извлечённого
+    // intro_message нет (его расчитывает extractor.js / sidebar fallback).
+    // Это режет ~40% веса payload (900 КБ → ~520 КБ).
+    const hasGoodIntro = p.intro_message && String(p.intro_message).length >= 30;
+    return {
+      id: p.tg_username || `tg:${p.user_id}`,
+      name: `${p.first_name || ''} ${p.last_name || ''}`.trim(),
+      telegram: p.tg_username,
+      role: p.role || 'participant',
+      city: p.city || '',
+      role_text: p.role_text || '',
+      tags: p.tags || [],
+      request: p.request || [],
+      offer: p.offer || [],
+      bio: p.bio || '',
+      raw_intro: hasGoodIntro ? '' : (p.raw_intro || ''),
+      intro_message: p.intro_message || '',
+      message_count: p.message_count || 0,
+      avatar_initials: initials(p.first_name, p.last_name),
+    };
+  });
 
   // generateLinks expects {id, tags, request, offer, city, name} — convert
   const forAlgo = nodes.map(n => ({
