@@ -167,9 +167,46 @@ function renderDetails(node) {
   return `<div class="profile-details">${paragraphs}</div>`;
 }
 
+// raw_intro у нас часто — это склейка нескольких сообщений из чата
+// через "\n---\n". Большинство — мусор (объявления, репосты). Нужно
+// вытащить именно представительское сообщение.
+const INTRO_KEYWORDS = [
+  'меня зовут', 'привет, я', 'привет я', 'представ', 'знакомьтесь',
+  '#участник', 'о себе', 'мне ', 'возраст', 'миссия', 'обо мне',
+];
+function extractIntroMessage(rawIntro, fallbackBio) {
+  if (!rawIntro) return fallbackBio || '';
+  // Делим по разделителю или двойному переводу строки
+  const chunks = rawIntro
+    .split(/\n-{3,}\n|\n\n+/g)
+    .map(s => s.trim())
+    .filter(s => s.length >= 120);
+  if (chunks.length === 0) return rawIntro.length >= 80 ? rawIntro : (fallbackBio || rawIntro);
+
+  // Скорим каждый кусок: bonus за intro-keywords, penalty за «всем привет, едем», ссылки, hashtag-only
+  function score(s) {
+    const lower = s.toLowerCase();
+    let pts = 0;
+    for (const kw of INTRO_KEYWORDS) if (lower.includes(kw)) pts += 4;
+    // Длинный «о себе» — хорошо. Очень длинный без keywords — может быть пост, но всё ещё лучше пустоты.
+    pts += Math.min(s.length / 200, 3);
+    // Penalties
+    if (/https?:\/\//.test(s)) pts -= 2;
+    if (/собирае?м.*автобус|поездк|трансфер|ссылка на чат|оплатить/i.test(lower)) pts -= 6;
+    if (/^[#@]?\w+\s*$/.test(s)) pts -= 5;
+    return pts;
+  }
+  const scored = chunks.map(c => ({ text: c, score: score(c) }));
+  scored.sort((a, b) => b.score - a.score);
+  const best = scored[0];
+  if (best.score < 1 && fallbackBio) return fallbackBio;
+  return best.text;
+}
+
 function renderIntro(node) {
-  if (!node.raw_intro) return '<div class="empty">Оригинальный текст не сохранён.</div>';
-  return `<div class="profile-intro">${escapeHtml(node.raw_intro).replace(/\n/g, '<br>')}</div>`;
+  const text = extractIntroMessage(node.raw_intro, node.bio);
+  if (!text) return '<div class="empty">Представление не найдено.</div>';
+  return `<div class="profile-intro">${escapeHtml(text).replace(/\n/g, '<br>')}</div>`;
 }
 
 function renderConnections(connections) {
