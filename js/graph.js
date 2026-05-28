@@ -49,6 +49,27 @@ function makeCollideForce(radiusFn) {
   return force;
 }
 
+// Radial force: тянет каждую ноду к окружности заданного радиуса от центра.
+// Без неё граф с 1300+ слабых связей схлопывается в плотный комок;
+// с ней — раскладывается в кольцо как в референсе MM17.
+// targetRFn(node) позволяет хабам сидеть ближе к центру, перифериям — дальше.
+function makeRadialForce(targetRFn, strength) {
+  let nodes;
+  function force(alpha) {
+    const k = strength * alpha;
+    for (const n of nodes) {
+      const r = Math.sqrt(n.x * n.x + n.y * n.y);
+      if (r < 0.5) continue;
+      const target = targetRFn(n);
+      const diff = (target - r) / r;
+      n.vx += n.x * diff * k;
+      n.vy += n.y * diff * k;
+    }
+  }
+  force.initialize = (n) => { nodes = n; };
+  return force;
+}
+
 export function createGraph(container, data, selfId, onNodeClick) {
   // Помечаем self
   for (const n of data.nodes) {
@@ -69,17 +90,24 @@ export function createGraph(container, data, selfId, onNodeClick) {
   let highlightNodes = new Set();
   let highlightLinks = new Set();
 
-  // Pre-init позиций по золотой спирали — d3-force иначе ставит много нод
-  // в (0,0), и с сильным charge симуляция получает деление на ноль → NaN
-  // → cascade через линки → весь граф улетает в Infinity.
+  // Pre-init позиций по окружности (как в референсе MM17) — d3-force иначе
+  // ставит много нод в (0,0), и с сильным charge симуляция получает деление
+  // на ноль → NaN → cascade через линки → весь граф улетает в Infinity.
+  // Хабы (высокий degree) стартуют ближе к центру, периферийные — на внешнем
+  // кольце. Это даёт радиальную структуру вместо комка.
   const N = data.nodes.length;
-  const golden = Math.PI * (3 - Math.sqrt(5));
+  const maxDeg = data.nodes.reduce((m, n) => Math.max(m, n.degree), 1);
+  // Базовый радиус кольца — масштабируется от размера графа.
+  const ringR = 280 + N * 2.2;
   for (let i = 0; i < N; i++) {
     const n = data.nodes[i];
     if (!Number.isFinite(n.x) || !Number.isFinite(n.y)) {
-      const r = 30 * Math.sqrt(i + 1);
-      n.x = r * Math.cos(i * golden);
-      n.y = r * Math.sin(i * golden);
+      const angle = (i / N) * 2 * Math.PI;
+      // Чем больше degree, тем ближе к центру; +/-10% jitter чтобы не выглядело идеальным кольцом
+      const degRatio = n.degree / maxDeg;
+      const r = ringR * (1 - degRatio * 0.45) * (0.92 + Math.random() * 0.16);
+      n.x = r * Math.cos(angle);
+      n.y = r * Math.sin(angle);
       n.vx = 0;
       n.vy = 0;
     }
@@ -180,17 +208,25 @@ export function createGraph(container, data, selfId, onNodeClick) {
 
   // Силы конфигурируются после graphData(). Pre-init позиций (выше) защищает
   // от NaN-каскада, который раньше срывал рендер при сильном charge.
-  graph.warmupTicks(120);
-  graph.d3VelocityDecay(0.45);
+  graph.warmupTicks(180);
+  graph.d3VelocityDecay(0.5);
+  graph.minZoom(0.45);
+  graph.maxZoom(8);
   graph.graphData(data);
 
-  graph.d3Force('charge').strength(-600).distanceMax(1400);
+  graph.d3Force('charge').strength(-820).distanceMax(1600);
   graph.d3Force('link')
-    .distance(l => l.type === 'strong' ? 140 : 280)
-    .strength(l => l.type === 'strong' ? 0.25 : 0.06);
+    .distance(l => l.type === 'strong' ? 150 : 380)
+    .strength(l => l.type === 'strong' ? 0.22 : 0.025);
   graph.d3Force('collide', makeCollideForce(n => Math.sqrt(n.val) * 4 * 3.0 + 14));
+  // Radial keeps the layout circular: хабы у внутреннего кольца, периферия — у внешнего.
+  // Заодно центрирует граф вокруг (0,0), потому что target ~= |position|.
+  graph.d3Force('radial', makeRadialForce(
+    n => ringR * (1 - (n.degree / maxDeg) * 0.45),
+    0.18
+  ));
 
-  setTimeout(() => graph.zoomToFit(800, 140), 900);
+  setTimeout(() => graph.zoomToFit(800, 120), 1100);
 
   return {
     instance: graph,
