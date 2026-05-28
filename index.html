@@ -3,7 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Социальные связи MM18</title>
+  <title>Социальные связи MM18 — интерактивный граф участников</title>
+  <meta name="description" content="Карта связей участников 18 потока мастермайнда Шамалова: кто с кем, кто чем может помочь, к кому стоит подойти на выезде.">
+  <meta name="theme-color" content="#050510">
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Социальные связи MM18">
+  <meta property="og:description" content="Интерактивная карта 100 участников мастермайнда: связи, темы, рекомендации.">
+  <meta property="og:url" content="https://ytimarketing.github.io/mm18-social-graph/">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Социальные связи MM18">
+  <meta name="twitter:description" content="Интерактивная карта 100 участников мастермайнда: связи, темы, рекомендации.">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -65,7 +81,10 @@
     <div id="sidebar-body"></div>
   </aside>
 
-  <script src="//cdn.jsdelivr.net/npm/force-graph"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/force-graph@1.51.4"
+    integrity="sha384-Hm6GpQcTNI5VqGgGS7lLxTGtEFcxu/kOVV0B7ozIZRu9blWVvigv5httJQZ2qZmY"
+    crossorigin="anonymous"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

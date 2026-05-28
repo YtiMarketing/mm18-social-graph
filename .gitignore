@@ -3,3 +3,8 @@ node_modules/
 *.log
 .env
 .env.local
+
+# Raw Telegram chat exports — могут содержать PII, не должны попадать в публичный репо
+result.json
+result*.json
+*.tg-export.json

@@ -2,9 +2,9 @@
 
 Интерактивный граф соц-связей участников 18 потока мастермайнда Артура Шамалова.
 
-Live: https://GH_USER.github.io/mm18-social-graph/
+**Live:** https://ytimarketing.github.io/mm18-social-graph/
 
-Данные обновляются автоматически из Google Form через n8n workflow.
+Данные генерируются [mm18-monitor-bot](https://github.com/YtiMarketing/mm18-monitor-bot) (мониторит Telegram-чат, извлекает профили через Claude SDK) и автоматически коммитятся сюда.
 
 ## Локальная разработка
 
