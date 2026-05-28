@@ -92,6 +92,7 @@ export function buildGraphData(profiles) {
     offer: p.offer || [],
     bio: p.bio || '',
     raw_intro: p.raw_intro || '',
+    intro_message: p.intro_message || '',
     message_count: p.message_count || 0,
     avatar_initials: initials(p.first_name, p.last_name),
   }));

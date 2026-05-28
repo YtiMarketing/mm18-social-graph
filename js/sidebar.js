@@ -204,7 +204,11 @@ function extractIntroMessage(rawIntro, fallbackBio) {
 }
 
 function renderIntro(node) {
-  const text = extractIntroMessage(node.raw_intro, node.bio);
+  // Приоритет: intro_message (AI-извлечённое полное представление) →
+  // heuristic из raw_intro → bio. Эмодзи и переводы строк сохраняем как есть.
+  const text = (node.intro_message && node.intro_message.length >= 30)
+    ? node.intro_message
+    : extractIntroMessage(node.raw_intro, node.bio);
   if (!text) return '<div class="empty">Представление не найдено.</div>';
   return `<div class="profile-intro">${escapeHtml(text).replace(/\n/g, '<br>')}</div>`;
 }
