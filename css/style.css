@@ -348,16 +348,64 @@ main#graph canvas { background: transparent !important; }
 .rec-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-bottom: 8px;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
   cursor: pointer;
   transition: border-color 0.15s;
 }
 .rec-card:hover { border-color: var(--accent); }
-.rec-name { font-weight: 600; display: flex; justify-content: space-between; gap: 8px; }
-.rec-score { color: var(--accent); font-size: 13px; font-weight: 600; }
-.rec-reason { color: var(--text-muted); font-size: 13px; margin-top: 4px; line-height: 1.45; }
+.rec-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.rec-meta { flex: 1; min-width: 0; }
+.rec-name { font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.rec-score { color: var(--accent); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.rec-role { color: var(--text-muted); font-size: 12px; margin-top: 1px; }
+.rec-intro-reason {
+  color: var(--text);
+  font-size: 13px;
+  margin: 6px 0 8px;
+  line-height: 1.5;
+}
+.rec-intro-reason strong { color: var(--text-muted); font-weight: 600; }
+.rec-help-you, .rec-help-them {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 7px 9px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+.rec-help-you {
+  background: rgba(63, 213, 160, 0.10);
+  color: #b8f0d4;
+  border-left: 3px solid #3fd5a0;
+}
+.rec-help-you strong { color: #3fd5a0; font-weight: 600; }
+.rec-help-them {
+  background: rgba(106, 169, 255, 0.10);
+  color: #c4ddff;
+  border-left: 3px solid #6aa9ff;
+}
+.rec-help-them strong { color: #6aa9ff; font-weight: 600; }
+.rec-tags { margin-top: 6px; font-size: 12px; color: var(--text-muted); }
+.rec-write {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.rec-write:hover { opacity: 0.92; }
+.section-sub {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
 
 .connections-list { display: flex; flex-direction: column; gap: 6px; }
 .conn-card {

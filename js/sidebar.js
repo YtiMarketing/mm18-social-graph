@@ -146,15 +146,49 @@ function renderOverview(node, recs) {
   const recsBlock = recs.length
     ? `<div class="section">
          <div class="section-title">СТОИТ ПОЗНАКОМИТЬСЯ</div>
-         ${recs.map(r => `
-           <div class="rec-card" data-jump-id="${escapeAttr(r.node.id)}">
-             <div class="rec-name">${escapeHtml(r.node.name)} <span class="rec-score">★ ${r.score}/10</span></div>
-             <div class="rec-reason">${escapeHtml(r.reason)}</div>
-           </div>
-         `).join('')}
+         <div class="section-sub">Люди, с которыми особенно стоит познакомиться по текущим данным графа.</div>
+         ${recs.map(r => renderRecCard(r)).join('')}
        </div>` : '';
 
   return ctxBlock + tagsHtml + wantsHtml + offerHtml + bioBrief + recsBlock;
+}
+
+function renderRecCard(r) {
+  const role = r.node.role;
+  const avatarColor = role === 'organizer'
+    ? 'background:#a155b9'
+    : role === 'mentor'
+      ? 'background:#00c853'
+      : 'background:#4a90d9';
+  const tg = r.node.telegram ? `https://t.me/${r.node.telegram}` : null;
+  return `
+    <div class="rec-card" data-jump-id="${escapeAttr(r.node.id)}">
+      <div class="rec-head">
+        <span class="profile-avatar conn-avatar" style="${avatarColor}">${escapeHtml(r.node.avatar_initials)}</span>
+        <div class="rec-meta">
+          <div class="rec-name">
+            ${escapeHtml(r.node.name)}
+            <span class="rec-score">★ ${r.score}/10</span>
+          </div>
+          <div class="rec-role">${escapeHtml(r.node.role_text || '')}</div>
+        </div>
+      </div>
+      ${r.introReason ? `<div class="rec-intro-reason"><strong>Почему стоит познакомиться:</strong> ${escapeHtml(r.introReason)}</div>` : ''}
+      ${r.theyHelpYou.length
+        ? `<div class="rec-help-you">✅ <strong>Чем ${escapeHtml(firstName(r.node.name))} может быть полезен тебе:</strong> ${escapeHtml(r.theyHelpYou.join(', '))}</div>`
+        : ''}
+      ${r.youHelpThem.length
+        ? `<div class="rec-help-them">🤝 <strong>Чем ты можешь быть полезен:</strong> ${escapeHtml(r.youHelpThem.join(', '))}</div>`
+        : ''}
+      ${(!r.theyHelpYou.length && !r.youHelpThem.length && r.sharedTags.length)
+        ? `<div class="rec-tags">Общие темы: ${r.sharedTags.map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('')}</div>`
+        : ''}
+      ${tg ? `<a class="rec-write" href="${tg}" target="_blank" onclick="event.stopPropagation()">Написать в Telegram</a>` : ''}
+    </div>
+  `;
+}
+function firstName(full) {
+  return String(full || '').split(/\s+/)[0] || '';
 }
 
 function renderDetails(node) {
