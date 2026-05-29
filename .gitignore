@@ -8,3 +8,5 @@ node_modules/
 result.json
 result*.json
 *.tg-export.json
+MM18*.json
+mm18*.json
